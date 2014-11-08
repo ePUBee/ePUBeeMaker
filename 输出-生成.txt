@@ -1,0 +1,9 @@
+﻿------ 已启动生成: 项目: iSpring, 配置: Release Any CPU ------
+  iSpring -> E:\工作\我的项目\iSpring\iSpring\bin\Release\iSpring.dll
+正在生成 iSpring...
+------ 发布已启动: 项目: iSpring, 配置: Release Any CPU ------
+正在连接到“E:\iSpring\”...
+正在发布文件...
+发布成功。
+========== 生成: 成功或最新 1 个，失败 0 个，跳过 0 个 ==========
+========== 发布: 成功 1 个，失败 0 个，跳过 0 个 ==========

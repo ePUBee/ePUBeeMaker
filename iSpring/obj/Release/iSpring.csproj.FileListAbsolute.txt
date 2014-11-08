@@ -1,0 +1,50 @@
+E:\工作\我的项目\复件 iSpring\iSpring\bin\Release\iSpring.dll
+E:\工作\我的项目\复件 iSpring\iSpring\bin\Release\iSpring.pdb
+E:\工作\我的项目\复件 iSpring\iSpring\bin\Release\iSpring.dll.manifest
+E:\工作\我的项目\复件 iSpring\iSpring\bin\Release\iSpring.vsto
+E:\工作\我的项目\复件 iSpring\iSpring\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+E:\工作\我的项目\复件 iSpring\iSpring\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\ResolveAssemblyReference.cache
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\iSpring.Properties.Resources.resources
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\iSpring.Ribbon1.resources
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\iSpring.UserTaskPane.resources
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\GenerateResource.read.1.tlog
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\GenerateResource.write.1.tlog
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\iSpring.dll
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\iSpring.pdb
+E:\工作\我的项目\复件 iSpring\iSpring\obj\Release\iSpring.SaveHtmlForm.resources
+E:\工作\我的项目\iSpring\iSpring\bin\Release\iSpring.dll.config
+E:\工作\我的项目\iSpring\iSpring\bin\Release\iSpring.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\iSpring.pdb
+E:\工作\我的项目\iSpring\iSpring\bin\Release\iSpring.dll.manifest
+E:\工作\我的项目\iSpring\iSpring\bin\Release\iSpring.vsto
+E:\工作\我的项目\iSpring\iSpring\bin\Release\Accessibility.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\Microsoft.CSharp.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\stdole.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\System.Data.DataSetExtensions.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\System.Data.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\System.DirectoryServices.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\System.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\System.Drawing.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\System.Windows.Forms.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\System.Xml.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\System.Xml.Linq.dll
+E:\工作\我的项目\iSpring\iSpring\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+E:\工作\我的项目\iSpring\iSpring\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.xml
+E:\工作\我的项目\iSpring\iSpring\obj\Release\ResolveAssemblyReference.cache
+E:\工作\我的项目\iSpring\iSpring\obj\Release\Interop.otkloadr.dll
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.csproj.ResolveComReference.cache
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.AddBasic.resources
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.AddRole.resources
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.BuildPath.resources
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.MetaEdit.resources
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.Properties.Resources.resources
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.Ribbon1.resources
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.SaveHtmlForm.resources
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.UserTaskPane.resources
+E:\工作\我的项目\iSpring\iSpring\obj\Release\GenerateResource.read.1.tlog
+E:\工作\我的项目\iSpring\iSpring\obj\Release\GenerateResource.write.1.tlog
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.dll
+E:\工作\我的项目\iSpring\iSpring\obj\Release\iSpring.pdb

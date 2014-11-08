@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualStudio.Tools.Applications.Runtime</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDeploymentArguments"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDeploymentArguments.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDeploymentArguments.#ctor(System.Uri)">
+      <param name="manifestLocation"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDeploymentArguments.ManifestLocation"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadedArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadedArgs.#ctor(System.Uri,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus,System.String,System.String)">
+      <param name="manifest"></param>
+      <param name="installationStatus"></param>
+      <param name="productName"></param>
+      <param name="path"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadedArgs.InstallationStatus"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadedArgs.LogFilePath"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadedArgs.ProductName"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadingArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadingArgs.#ctor(System.Uri,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus,System.String,System.Uri,System.Uri)">
+      <param name="manifest"></param>
+      <param name="installationStatus"></param>
+      <param name="productName"></param>
+      <param name="originalLocation"></param>
+      <param name="finalLocation"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadingArgs.FinalManifestLocation"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadingArgs.InstallationStatus"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadingArgs.OriginalManifestLocation"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadingArgs.ProductName"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs.#ctor(System.Uri,System.String,Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInDownloadProgressState,System.Int64,System.Int64,System.Int32)">
+      <param name="manifest"></param>
+      <param name="productName"></param>
+      <param name="state"></param>
+      <param name="bytesDownloaded"></param>
+      <param name="totalBytesToDownload"></param>
+      <param name="percentageComplete"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs.BytesDownloaded"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs.PercentageComplete"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs.ProductName"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs.State"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs.TotalBytesToDownload"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInformation"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInformation.#ctor(System.AppDomainSetup,System.String,System.String)">
+      <param name="setup"></param>
+      <param name="vstaManifest"></param>
+      <param name="customizationId"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInformation.AppDomainSetup"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInformation.ApplicationManifest"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInformation.CustomizationId"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus"></member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus.InitialInstall">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus.RunFromCache">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus.RunFromFolder">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus.Update">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus.Offline">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus.Uninstall">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus.Rollback">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstalledArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstalledArgs.#ctor(System.Uri,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus,System.String)">
+      <param name="manifest"></param>
+      <param name="installationStatus"></param>
+      <param name="productName"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstalledArgs.ProductName"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallingArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallingArgs.#ctor(System.Uri,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus,System.String)">
+      <param name="manifest"></param>
+      <param name="installationStatus"></param>
+      <param name="productName"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallingArgs.InstallationStatus"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallingArgs.ProductName"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.#ctor(System.Uri,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus,System.String,System.String,System.String,System.String,System.String,System.String,System.Uri)">
+      <param name="manifest"></param>
+      <param name="installationStatus"></param>
+      <param name="productName"></param>
+      <param name="deploymentManifest"></param>
+      <param name="applicationManifest"></param>
+      <param name="manifestXml"></param>
+      <param name="path"></param>
+      <param name="version"></param>
+      <param name="supportUri"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.ApplicationManifestXml"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.DeploymentManifestXml"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.HostManifestXml"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.InstallationStatus"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.LogFilePath"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.ProductName"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.SupportUri"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs.Version"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadingArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadingArgs.#ctor(System.Uri,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus)">
+      <param name="manifest"></param>
+      <param name="installationStatus"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadingArgs.InstallationStatus"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInOfflineArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInOfflineArgs.#ctor(System.Uri,System.String)">
+      <param name="manifest"></param>
+      <param name="productName"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInOfflineArgs.ProductName"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs">
+      <summary>The arguments passed to a class that implements <see cref="T:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction" />. </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.#ctor(System.Uri,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs" /> class. </summary>
+      <param name="manifestLocation">Gets the location of the deployment manifest.</param>
+      <param name="installationStatus">Gets the type of add-in installation that is being performed.</param>
+      <param name="deploymentManifestXml">Gets the deployment manifest for the add-in.</param>
+      <param name="applicationManifestXml">Gets the application manifest for the add-in.</param>
+      <param name="hostManifestXml">Gets the application manifest for the host application. </param>
+      <param name="postActionManifestXml">Gets the application manifest for the post-deployment action.</param>
+      <param name="productName">Gets the name of the add-in that is defined in the deployment manifest.</param>
+      <param name="version">Gets the version of the add-in being downloaded.</param>
+      <param name="addInPath">Gets the location of the add-in.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.AddInPath">
+      <summary>Gets the location of the add-in. </summary>
+      <returns>The location of the add-in being installed to the ClickOnce cache.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.ApplicationManifestXml">
+      <summary>Gets the application manifest for the add-in.</summary>
+      <returns>An XML string that represents the application manifest for the add-in.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.DeploymentManifestXml">
+      <summary>Gets the deployment manifest for the add-in. </summary>
+      <returns>An XML string that represents the deployment manifest for the add-in.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.HostManifestXml">
+      <summary>Gets the application manifest for the host application.</summary>
+      <returns>An XML string that represents the application manifest for the host application.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.InstallationStatus">
+      <summary>Gets the type of add-in installation that is being performed.</summary>
+      <returns>The type of add-in installation that is being performed.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.PostActionManifestXml">
+      <summary>Gets the application manifest for the post-deployment action.</summary>
+      <returns>An XML string that represents the application manifest for the post-deployment action.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.ProductName">
+      <summary>Gets the name of the add-in that is defined in the deployment manifest.</summary>
+      <returns>The name of the add-in that is defined in the deployment manifest.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs.Version">
+      <summary>Gets the version of the add-in being downloaded.</summary>
+      <returns>The version of the add-in being downloaded. The version number is based on the value in the deployment manifest.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInProcessAbortArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInProcessAbortArgs.#ctor(System.Uri,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus,System.String,System.Exception,System.String)">
+      <param name="manifest"></param>
+      <param name="installationStatus"></param>
+      <param name="productName"></param>
+      <param name="error"></param>
+      <param name="path"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInProcessAbortArgs.Error"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInProcessAbortArgs.InstallationStatus"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInProcessAbortArgs.LogFilePath"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInProcessAbortArgs.ProductName"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstalledArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstalledArgs.#ctor(System.Uri,System.String,System.String,System.String,System.String)">
+      <param name="manifest"></param>
+      <param name="productName"></param>
+      <param name="deploymentManifest"></param>
+      <param name="applicationManifest"></param>
+      <param name="manifestXml"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstalledArgs.ApplicationManifestXml"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstalledArgs.DeploymentManifestXml"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstalledArgs.HostManifestXml"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstalledArgs.ProductName"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstallingArgs"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstallingArgs.#ctor(System.Uri,System.String)">
+      <param name="manifest"></param>
+      <param name="productName"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstallingArgs.ProductName"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInDownloadProgressState"></member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInDownloadProgressState.DownloadingApplicationFiles">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInDownloadProgressState.DownloadingDeploymentManifest">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInDownloadProgressState.DownloadingApplicationManifest">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInPromptingLevel"></member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInPromptingLevel.TrustByPrompt">
+      <summary />
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInPromptingLevel.TrustByCertificate">
+      <summary />
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence.#ctor(System.Uri,System.Uri,System.Security.Cryptography.ManifestSignatureInformationCollection,Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallationStatus,Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInPromptingLevel,System.Boolean,System.String)">
+      <param name="manifest"></param>
+      <param name="finalLocation"></param>
+      <param name="collection"></param>
+      <param name="installationStatus"></param>
+      <param name="promptingLevel"></param>
+      <param name="permissionElevationRequired"></param>
+      <param name="productName"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence.FinalManifestLocation"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence.InstallationStatus"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence.OriginalManifestLocation"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence.PermissionElevationRequired"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence.ProductName"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence.PromptingLevel"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence.SignatureResults"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction">
+      <summary>Represents a post-deployment action, which can perform additional installation steps as the final step in a ClickOnce installer.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IAddInPostDeploymentAction.Execute(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInPostDeploymentActionArgs)">
+      <summary>Runs the post-deployment action, which can perform additional installation steps as the final step in a ClickOnce installer.</summary>
+      <param name="args">The arguments for the post-deployment action, including the path of the ClickOnce installer.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInCancelableInstaller"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInCancelableInstaller.OnAddInDownloadProgressChanged(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs,System.Boolean@)">
+      <param name="args"></param>
+      <param name="cancel"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInDownloaded(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadedArgs)">
+      <param name="args"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInDownloading(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadingArgs,System.Boolean@)">
+      <param name="args"></param>
+      <param name="cancel"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInDownloadProgressChanged(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInDownloadProgressChangedArgs)">
+      <param name="args"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInInstalled(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstalledArgs)">
+      <param name="args"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInInstalling(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInInstallingArgs,System.Boolean@)">
+      <param name="args"></param>
+      <param name="cancel"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInManifestsDownloaded(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadedArgs)">
+      <param name="args"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInManifestsDownloading(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInManifestsDownloadingArgs,System.Boolean@)">
+      <param name="args"></param>
+      <param name="cancel"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInOffline(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInOfflineArgs,System.Boolean@)">
+      <param name="args"></param>
+      <param name="goOffline"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInProcessAbort(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInProcessAbortArgs)">
+      <param name="args"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInUninstalled(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstalledArgs)">
+      <param name="args"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInInstaller.OnAddInUninstalling(Microsoft.VisualStudio.Tools.Applications.Deployment.AddInUninstallingArgs,System.Boolean@)">
+      <param name="args"></param>
+      <param name="cancel"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInTrustManager"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInTrustManager.VerifyAddInPermissions(System.Security.PermissionSet)">
+      <param name="permissions"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInTrustManager.VerifyAddInTrust(Microsoft.VisualStudio.Tools.Applications.Deployment.ClickOnceAddInTrustEvidence)">
+      <param name="evidence"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInTrustManagerSettings"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Deployment.IClickOnceAddInTrustManagerSettings.RequireTrustVerificationOnLoad"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.AddInException">
+      <summary>The exception that is thrown when an exception is passed between an add-in and the host application. </summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.AddInException.#ctor(System.Exception)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.AddInException" /> class with a reference to the inner exception that is the cause of this exception.</summary>
+      <param name="innerException">The <see cref="T:System.Exception" /> that is the cause of the current exception, or null if no inner exception is specified.</param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.AddInException.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Adds information about the exception to the specified <see cref="T:System.Runtime.Serialization.SerializationInfo" />.</summary>
+      <param name="info">A <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that contains the information that is required to serialize the current <see cref="T:Microsoft.VisualStudio.Tools.Applications.Contract.AddInException" />.</param>
+      <param name="context">A <see cref="T:System.Runtime.Serialization.StreamingContext" /> that contains the source and destination of the serialized stream that is associated with the current <see cref="T:Microsoft.VisualStudio.Tools.Applications.Contract.AddInException" />.</param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CacheAlreadyLoadedException">
+      <summary>The exception that is thrown when a document-level customization attempts to load the data cache in a document after the data cache has already been loaded.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CacheAlreadyLoadedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CacheAlreadyLoadedException.#ctor(System.String)">
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CacheAlreadyLoadedException.#ctor(System.String,System.Exception)">
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CacheAlreadyLoadedException.#ctor(System.String,System.String)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CacheAlreadyLoadedException.#ctor(System.String,System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute">
+      <summary>Instructs the Visual Studio Tools for Office runtime to add the specified data object to the data cache in the document.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute" /> class.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException">
+      <summary>The exception that is thrown when an attempt to serialize cached data in a document-level customization fails.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException.#ctor(System.String,System.String)">
+      <param name="hostItemId"></param>
+      <param name="itemId"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException.#ctor(System.String,System.String,System.Exception)">
+      <param name="hostItemId"></param>
+      <param name="itemId"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException.#ctor(System.String,System.String,System.String)">
+      <param name="message"></param>
+      <param name="hostItemId"></param>
+      <param name="itemId"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException.#ctor(System.String,System.String,System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="hostItemId"></param>
+      <param name="itemId"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataTypeMismatchException">
+      <summary>The exception that is thrown when the XML serialized state of an object in the data cache does not match the type information for the object in the cached data manifest.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataTypeMismatchException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataTypeMismatchException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataTypeMismatchException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataTypeMismatchException.#ctor(System.Type)">
+      <param name="valueType"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCacheInNonStartupException">
+      <summary>This exception is not used by the Visual Studio 2010 Tools for Office Runtime. It is included in this version of the runtime to maintain compatibility with code that was compiled using earlier versions of the runtime.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCacheInNonStartupException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCacheInNonStartupException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCacheInNonStartupException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCacheInNonStartupException.#ctor(System.Type)">
+      <param name="valueType"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateCustomizationDomainException">
+      <summary>The exception that is thrown when an application domain cannot be created and the assembly for an Office solution cannot be loaded.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateCustomizationDomainException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateCustomizationDomainException.#ctor(System.Exception)">
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateCustomizationDomainException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateCustomizationDomainException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateStartupObjectException">
+      <summary>The exception that is thrown when a host item class in an Office solution assembly cannot be instantiated.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateStartupObjectException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateStartupObjectException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateStartupObjectException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotCreateStartupObjectException.#ctor(System.String,System.Reflection.Assembly,System.Exception)">
+      <param name="className"></param>
+      <param name="assembly"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindMemberException">
+      <summary>The exception that is thrown when you try to programmatically add or remove an object from the data cache in a document-level customization, but the specified object is not declared in the specified host item class.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindMemberException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindMemberException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindMemberException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindMemberException.#ctor(System.String,System.Type)">
+      <param name="fieldName"></param>
+      <param name="valueType"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindObjectToFillException">
+      <summary>The exception that is thrown when the Visual Studio Tools for Office runtime cannot locate an object in the data cache of a document-level customization.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindObjectToFillException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindObjectToFillException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindObjectToFillException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindObjectToFillException.#ctor(System.String,System.Type)">
+      <param name="cachedDataId"></param>
+      <param name="hostItemType"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindStartupObjectAssemblyException">
+      <summary>This exception is not used by the Visual Studio 2010 Tools for Office Runtime. It is included in this version of the runtime to maintain compatibility with code that was compiled using earlier versions of the runtime.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindStartupObjectAssemblyException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindStartupObjectAssemblyException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindStartupObjectAssemblyException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotFindStartupObjectAssemblyException.#ctor(System.String,System.String)">
+      <param name="assemblyFullName"></param>
+      <param name="className"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotLoadManifestException">
+      <summary>The exception that is thrown when the manifest in the document cannot be loaded.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotLoadManifestException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotLoadManifestException.#ctor(System.Exception)">
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotLoadManifestException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotLoadManifestException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveAppInfoException"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveAppInfoException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveAppInfoException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveAppInfoException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveCachedDataException">
+      <summary>The exception that is thrown when the cached data in the document is corrupted or missing.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveCachedDataException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveCachedDataException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.CannotRetrieveCachedDataException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException">
+      <summary>The exception that is thrown when a control that was added to a document in an Office solution could not be initialized.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException.#ctor(System.String)">
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException.#ctor(System.String,System.Exception)">
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException.#ctor(System.String,System.String)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlCouldNotBeInitializedException.#ctor(System.String,System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlNotFoundException">
+      <summary>The exception that is thrown when an attempt is made to reference a control in a document-level customization, but the control does not exist.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlNotFoundException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlNotFoundException.#ctor(System.String)">
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlNotFoundException.#ctor(System.String,System.Exception)">
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlNotFoundException.#ctor(System.String,System.String)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ControlNotFoundException.#ctor(System.String,System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException">
+      <summary>The exception that is thrown when you attempt to attach a customization to a document that is already part of a document-level customization that was created by using Office development tools in Visual Studio.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException.#ctor(System.Exception)">
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyCustomizedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyLoadedException"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyLoadedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyLoadedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentAlreadyLoadedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentClosedException">
+      <summary>The exception that is thrown when you attempt to perform an operation using the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> class on a closed document.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentClosedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentClosedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentClosedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException">
+      <summary>The exception that is thrown when you attempt to use the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> class to perform an operation on a document-level customization that was created by using an earlier version of the Office development tools in Visual Studio.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException.#ctor(System.Exception)">
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentCustomizedWithPreviousRuntimeException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException">
+      <summary>The exception that is thrown when you try to perform an invalid operation on a document by using the <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> class.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException.#ctor(System.Exception)">
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotCustomizedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotLoadedException"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotLoadedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotLoadedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.DocumentNotLoadedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostAssemblyAttribute">
+      <summary>Specifies that the assembly in which this attribute appears contains proxy types for the types exposed by the host application.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.HostAssemblyAttribute.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostAssemblyAttribute" /> class. </summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventAttribute">
+      <summary>Relates an event in a proxy type to an event in the host application.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventAttribute.#ctor(System.Int32)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventAttribute" /> class. </summary>
+      <param name="dispId">For COM events only. The dispatch ID of the COM event for which the event marked with this <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventAttribute" /> is a proxy.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventAttribute.DispId">
+      <summary>Gets the dispatch ID of the COM event for which the event marked with this <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventAttribute" /> is a proxy.</summary>
+      <returns>The dispatch ID of the COM event for which the event marked with this <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventAttribute" /> is a proxy.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventAttribute.HostEventMethodType">
+      <summary>Gets or sets a value that specifies the kind of event accessor method the host application will use for this event in the proxy type.</summary>
+      <returns>A value that specifies the kind of event accessor method the host application will use for this event in the proxy type.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventMethodType">
+      <summary>Indicates the type of the method in the host application that corresponds to a method in an add-in.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventMethodType.Unspecified">
+      <summary>Indicates that the type of the host event accessor method is not specified. The runtime should determine the type by examining the prefix of the event accessor method name, for example, "add_" or "remove_".</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventMethodType.Add">
+      <summary>Indicates that the host method is used to add an event handler to a delegate.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventMethodType.Remove">
+      <summary>Indicates that the host method is used to remove an event handler from a delegate.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventMethodType.Raise">
+      <summary>Indicates that the host method raises the event.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.Tools.Applications.Runtime.HostEventMethodType.Other">
+      <summary>Indicates that the host event accessor method type is unspecified, but the runtime should not attempt to determine the type from the method name.</summary>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostMemberAttribute">
+      <summary>Sets the way that methods and properties in the proxy are bound to the corresponding members in the host application's object model.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.HostMemberAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostMemberAttribute" /> class. </summary>
+      <param name="memberName">The name of the method or property in the host application's object model. This name will usually be the same as the method or property name in the proxy type.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.HostMemberAttribute.BindingFlags">
+      <summary>Gets or sets a <see cref="T:System.Reflection.BindingFlags" /> enumeration value that controls binding and the way in which the search for members and types is conducted by reflection.</summary>
+      <returns>One of the enumeration values that controls binding and the way in which the search for members and types is conducted by reflection.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.HostMemberAttribute.MemberName">
+      <summary>Gets the name of the member in the host application that the member in the proxy represents.</summary>
+      <returns>The name of the member in the host application that corresponds to the member in the proxy.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostTypeAttribute">
+      <summary>Specifies the relationship between a type and its canonical name.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.HostTypeAttribute.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.HostTypeAttribute" /> class. </summary>
+      <param name="canonicalName">The canonical name of the type.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.HostTypeAttribute.CanonicalName">
+      <summary>Gets the canonical name of the type.</summary>
+      <returns>The name that the runtime uses to identify the type.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.HostTypeAttribute.ProxyType">
+      <summary>Gets or sets a <see cref="T:System.Type" /> instance that describes the proxy type.</summary>
+      <returns>A <see cref="T:System.Type" /> instance that describes the proxy type.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.HostTypeAttribute.SourceInterfaceGuid">
+      <summary>For COM only. Gets or sets the GUID of the source interface for a coclass in the host application's object model.</summary>
+      <returns>The GUID of the source interface for COM events.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfo"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfo.DeleteItem(System.String,System.String)">
+      <param name="elementType"></param>
+      <param name="id"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfo.ReadItem(System.String,System.String)">
+      <param name="elementType"></param>
+      <param name="id"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfo.WriteItem(System.String,System.String,System.Byte[])">
+      <param name="elementType"></param>
+      <param name="id"></param>
+      <param name="item"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfoDocument"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfoDocument.Close"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfoDocument.GetDocument"></member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfoDocument.HasCustomization"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfoDocument.RemoveCustomization"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfoDocument.SetDocument(System.String,System.Byte[],System.IO.FileAccess)">
+      <param name="fileName"></param>
+      <param name="bytes"></param>
+      <param name="access"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.IAppInfoDocument.SupportsCachedDataManifest"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType">
+      <summary>Customizes the caching behavior of a type in document-level customizations.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.AfterLoad">
+      <summary>Called after the Visual Studio Tools for Office runtime has finished loading the type.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.AfterSave">
+      <summary>Called after a save operation is completed for the type.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.BeforeLoad">
+      <summary>Called before the Visual Studio Tools for Office runtime loads the type.</summary>
+      <returns>false if the state of the type should not be loaded from the data cache; otherwise, true.</returns>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.BeforeSave">
+      <summary>Called before the Visual Studio Tools for Office runtime persists the type into the document.</summary>
+      <returns>false if the state of the type should not be saved; otherwise, true.</returns>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType.IsDirty">
+      <summary>Gets a value that indicates whether the cached type has changed since the last time it was saved.</summary>
+      <returns>true if the cached type has been changed since it was last saved; otherwise, false.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.IComAddInAutomationServiceProviderCallback"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.IComAddInAutomationServiceProviderCallback.RequestComAddInAutomationService"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidDeployManifestException">
+      <summary>This exception is not used by the Visual Studio 2010 Tools for Office Runtime. It is included in this version of the runtime to maintain compatibility with code that was compiled using earlier versions of the runtime.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidDeployManifestException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidDeployManifestException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidDeployManifestException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidManifestException">
+      <summary>This exception is thrown when the application manifest or cached data manifest for the Office solution is not valid.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidManifestException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidManifestException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidManifestException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidNewApplicationManifestException">
+      <summary>This exception is not used by the Visual Studio 2010 Tools for Office Runtime. It is included in this version of the runtime to maintain compatibility with code that was compiled using earlier versions of the runtime.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidNewApplicationManifestException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidNewApplicationManifestException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.InvalidNewApplicationManifestException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemAlreadyInCacheException">
+      <summary>The exception that is thrown when an attempt is made to add an item to the data cache in a document-level customization, but the item already exists in the cache.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemAlreadyInCacheException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemAlreadyInCacheException.#ctor(System.String)">
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemAlreadyInCacheException.#ctor(System.String,System.Exception)">
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemAlreadyInCacheException.#ctor(System.String,System.String)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemAlreadyInCacheException.#ctor(System.String,System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemNotInCacheException">
+      <summary>The exception that is thrown when an attempt is made to retrieve an item from the data cache in a document-level customization, but the item does not exist.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemNotInCacheException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemNotInCacheException.#ctor(System.String)">
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemNotInCacheException.#ctor(System.String,System.Exception)">
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemNotInCacheException.#ctor(System.String,System.String)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ItemNotInCacheException.#ctor(System.String,System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="identifier"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.ManifestNotExecutedException"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ManifestNotExecutedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ManifestNotExecutedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.ManifestNotExecutedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingDataIdException">
+      <summary>The exception that is thrown when a <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> object is saved while the cached data manifest contains a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> with an <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.Id" /> property that is null or an empty string.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingDataIdException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingDataIdException.#ctor(System.String)">
+      <param name="hostItemId"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingDataIdException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingDataIdException.#ctor(System.String,System.String)">
+      <param name="message"></param>
+      <param name="hostItemId"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingHostItemIdException">
+      <summary>The exception that is thrown when a <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> object is saved while the cached data manifest contains a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem" /> with an <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataHostItem.Id" /> property that is null or an empty string.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingHostItemIdException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingHostItemIdException.#ctor(System.Int32)">
+      <param name="itemIndex"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingHostItemIdException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingHostItemIdException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingTypeException">
+      <summary>The exception that is thrown when a <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> object is saved while the cached data manifest contains a <see cref="T:Microsoft.VisualStudio.Tools.Applications.CachedDataItem" /> with a <see cref="P:Microsoft.VisualStudio.Tools.Applications.CachedDataItem.DataType" /> property that is null or an empty string.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingTypeException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingTypeException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingTypeException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MissingTypeException.#ctor(System.String,System.String)">
+      <param name="hostItemId"></param>
+      <param name="id"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.MultipleCachedDataCouldNotBeSerializedException">
+      <summary>The exception that is thrown when more than one cached data object could not be serialized in a document-level customization.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MultipleCachedDataCouldNotBeSerializedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MultipleCachedDataCouldNotBeSerializedException.#ctor(Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException[])">
+      <param name="exceptions"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MultipleCachedDataCouldNotBeSerializedException.#ctor(Microsoft.VisualStudio.Tools.Applications.Runtime.CachedDataCouldNotBeSerializedException[],System.Exception)">
+      <param name="exceptions"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MultipleCachedDataCouldNotBeSerializedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MultipleCachedDataCouldNotBeSerializedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MultipleCachedDataCouldNotBeSerializedException.GetExceptions"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.MultipleCachedDataCouldNotBeSerializedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <param name="info"></param>
+      <param name="context"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.NonCacheableTypeException">
+      <summary>The exception that is thrown when an attempt is made to cache an object in a document-level customization, but the type of the object is not a <see cref="T:System.Data.DataSet" />, <see cref="T:System.Data.DataTable" />, or a type that meets the requirements specified in Caching Data.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NonCacheableTypeException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NonCacheableTypeException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NonCacheableTypeException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.NoStartupObjectsException">
+      <summary>This exception is thrown when a solution assembly that was created by using Office development tools in Visual Studio does not contain a startup object.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NoStartupObjectsException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NoStartupObjectsException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NoStartupObjectsException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOfflineException">
+      <summary>This exception is not used by the Visual Studio 2010 Tools for Office Runtime. It is included in this version of the runtime to maintain compatibility with code that was compiled using earlier versions of the runtime.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOfflineException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOfflineException.#ctor(System.Exception)">
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOfflineException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOfflineException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOnlineException">
+      <summary>This exception is not used by the Visual Studio 2010 Tools for Office Runtime. It is included in this version of the runtime to maintain compatibility with code that was compiled using earlier versions of the runtime.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOnlineException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOnlineException.#ctor(System.Exception)">
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOnlineException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.NotAvailableOnlineException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException">
+      <summary>Provides the base class for exceptions in Visual Studio Tools for Office runtime.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException.#ctor(System.Int64)">
+      <param name="errorCode"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <param name="info"></param>
+      <param name="context"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException.#ctor(System.String,System.Int64)">
+      <param name="message"></param>
+      <param name="errorCode"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.RuntimeException.#ctor(System.String,System.Int64,System.Exception)">
+      <param name="message"></param>
+      <param name="errorCode"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.SafeArrayDefaultRankAttribute">
+      <summary>Defines the default rank of an array.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.SafeArrayDefaultRankAttribute.#ctor(System.Int32)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.VisualStudio.Tools.Applications.Runtime.SafeArrayDefaultRankAttribute" /> class with a default rank.</summary>
+      <param name="defaultRank">The default rank of the array.</param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.SafeArrayDefaultRankAttribute.DefaultRank">
+      <summary>Gets the default rank of the array.</summary>
+      <returns>An <see cref="T:System.Int32" /> value that represents the default rank of the array.</returns>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute.#ctor(System.Int32)">
+      <param name="startupIndex"></param>
+    </member>
+    <member name="P:Microsoft.VisualStudio.Tools.Applications.Runtime.StartupObjectAttribute.StartupIndex"></member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException">
+      <summary>The exception that is thrown when you pass a file with an extension that is not supported by Office development tools in Visual Studio to a <see cref="T:Microsoft.VisualStudio.Tools.Applications.ServerDocument" /> constructor or method.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.UnknownCustomizationFileException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+    <member name="T:Microsoft.VisualStudio.Tools.Applications.Runtime.UpdateFailedException">
+      <summary>This exception is not used by the Visual Studio 2010 Tools for Office Runtime. It is included in this version of the runtime to maintain compatibility with code that was compiled using earlier versions of the runtime.</summary>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.UpdateFailedException.#ctor"></member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.UpdateFailedException.#ctor(System.Exception)">
+      <param name="innerException"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.UpdateFailedException.#ctor(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.VisualStudio.Tools.Applications.Runtime.UpdateFailedException.#ctor(System.String,System.Exception)">
+      <param name="message"></param>
+      <param name="innerException"></param>
+    </member>
+  </members>
+</doc>

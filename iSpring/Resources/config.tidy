@@ -1,0 +1,4 @@
+indent-spaces: 4
+indent: auto
+indent-attributes: yes
+tidy-mark: no
