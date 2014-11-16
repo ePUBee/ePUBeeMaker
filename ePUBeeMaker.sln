@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ePUBeeMaker", "ePUBee\ePUBeeMaker.csproj", "{2ED1A146-61BC-46E5-BC3B-4C6931A675BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ED1A146-61BC-46E5-BC3B-4C6931A675BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED1A146-61BC-46E5-BC3B-4C6931A675BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED1A146-61BC-46E5-BC3B-4C6931A675BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED1A146-61BC-46E5-BC3B-4C6931A675BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

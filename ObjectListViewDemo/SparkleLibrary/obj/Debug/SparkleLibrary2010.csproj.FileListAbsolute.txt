@@ -1,5 +1,0 @@
-C:\Documents and Settings\Administrator\桌面\ObjectListViewFull-2.7.0\ObjectListViewDemo\SparkleLibrary\bin\Debug\SparkleLibrary.dll
-C:\Documents and Settings\Administrator\桌面\ObjectListViewFull-2.7.0\ObjectListViewDemo\SparkleLibrary\bin\Debug\SparkleLibrary.pdb
-C:\Documents and Settings\Administrator\桌面\ObjectListViewFull-2.7.0\ObjectListViewDemo\SparkleLibrary\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\Administrator\桌面\ObjectListViewFull-2.7.0\ObjectListViewDemo\SparkleLibrary\obj\Debug\SparkleLibrary.dll
-C:\Documents and Settings\Administrator\桌面\ObjectListViewFull-2.7.0\ObjectListViewDemo\SparkleLibrary\obj\Debug\SparkleLibrary.pdb
