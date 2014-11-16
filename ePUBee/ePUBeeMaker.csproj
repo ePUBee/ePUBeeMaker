@@ -41,7 +41,7 @@
     <PublishUrl>E:\ePUBeeMaker\Release\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>1.0.0.43</ApplicationVersion>
+    <ApplicationVersion>1.0.0.44</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
