@@ -151,8 +151,10 @@ namespace ePUBee
         {
 
             XmlNodeList xnList = xmldoc.SelectNodes("//navPoint");
-            if (treeListView1.SelectedItems.Count < 0)
-            {
+
+            //have errors here
+            //if (treeListView1.SelectedNodes.Count == 0 || true)
+            //{//
                 foreach (XmlNode n in xnList)
                 {
                     if (n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml == treeListView1.SelectedNodes[0].Text)
@@ -167,10 +169,10 @@ namespace ePUBee
                         return;
                     }
                 }
-            }
-            else {
-                MessageBox.Show("Please select an item.");
-            }
+            //}
+            //else {
+            //    MessageBox.Show("Please select an item.");
+            //}
         }
     }
 }
