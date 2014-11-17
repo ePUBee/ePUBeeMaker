@@ -151,7 +151,7 @@ namespace ePUBee
         {
 
             XmlNodeList xnList = xmldoc.SelectNodes("//navPoint");
-            if (treeListView1.SelectedItems.Count > 0)
+            if (treeListView1.SelectedItems.Count < 0)
             {
                 foreach (XmlNode n in xnList)
                 {
