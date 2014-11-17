@@ -23,24 +23,24 @@ namespace ePUBee
             BasicDoc.AppendChild(xmldecl);
 
             BasicDoc.InnerXml = "<metadata xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:opf=\"http://www.idpf.org/2007/opf\">" +
-                "<dc:subject>主题</dc:subject>" +
-                "<dc:relation>关联</dc:relation>" +
-                "<dc:publisher>出版</dc:publisher>" +
-                "<dc:date opf:event=\"customdate\">日期（自定义）</dc:date>" +
-                "<dc:date opf:event=\"modification\">日期:修改</dc:date>" +
-                "<dc:date opf:event=\"publication\">日期:出版</dc:date>" +
-                "<dc:date opf:event=\"creation\">日期:创建</dc:date>" +
-                "<dc:rights>权限</dc:rights>" +
-                "<dc:source>来源</dc:source>" +
-                "<dc:identifier opf:scheme=\"DOI\">标识符:DOI</dc:identifier>" +
-                "<dc:identifier opf:scheme=\"ISBN\">标识符:ISBN</dc:identifier>" +
-                "<dc:identifier opf:scheme=\"ISSN\">标识符:ISSN</dc:identifier>" +
-                "<dc:identifier opf:scheme=\"customidentifier\">标识符</dc:identifier>" +
-                "<dc:format>格式</dc:format>" +
-                "<dc:type>类型</dc:type>" +
-                "<dc:coverage>覆盖范围</dc:coverage>" +
-                "<dc:description>说明</dc:description>" +
-                "<dc:title>资源名</dc:title>" +
+                "<dc:subject>subject</dc:subject>" +
+                "<dc:relation>relation</dc:relation>" +
+                "<dc:publisher>publisher</dc:publisher>" +
+                "<dc:date opf:event=\"customdate\">date(customerize)</dc:date>" +
+                "<dc:date opf:event=\"modification\">date:modification</dc:date>" +
+                "<dc:date opf:event=\"publication\">date:publication</dc:date>" +
+                "<dc:date opf:event=\"creation\">date:creation</dc:date>" +
+                "<dc:rights>rights</dc:rights>" +
+                "<dc:source>source</dc:source>" +
+                "<dc:identifier opf:scheme=\"DOI\">identifier:DOI</dc:identifier>" +
+                "<dc:identifier opf:scheme=\"ISBN\">identifier:ISBN</dc:identifier>" +
+                "<dc:identifier opf:scheme=\"ISSN\">identifier:ISSN</dc:identifier>" +
+                "<dc:identifier opf:scheme=\"customidentifier\">identifier</dc:identifier>" +
+                "<dc:format>format</dc:format>" +
+                "<dc:type>type</dc:type>" +
+                "<dc:coverage>converage</dc:coverage>" +
+                "<dc:description>description</dc:description>" +
+                "<dc:title>source title</dc:title>" +
                 "</metadata>";
         }
 

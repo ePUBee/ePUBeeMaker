@@ -16,7 +16,8 @@ namespace ePUBee
 
         private void ThisAddIn_Startup(object sender, System.EventArgs e)
         {
-
+            //MessageBox.Show(ePUBee.getLang.getString("publish"));
+            //throw new Exception("publish start");
         }
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)

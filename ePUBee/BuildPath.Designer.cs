@@ -53,7 +53,7 @@ namespace ePUBee
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "重命名";
+            this.button1.Text = "rename";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -63,7 +63,7 @@ namespace ePUBee
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
-            this.button2.Text = "确定";
+            this.button2.Text = "Confirm";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -73,7 +73,7 @@ namespace ePUBee
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
-            this.button3.Text = "取消";
+            this.button3.Text = "Cancel";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -84,25 +84,25 @@ namespace ePUBee
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(28, 378);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(96, 16);
+            this.checkBox1.Size = new System.Drawing.Size(114, 16);
             this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "仅显示目录项";
+            this.checkBox1.Text = "Show menus only";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "<选择要包括的标题>",
-            "无",
-            "最高等级1",
-            "最高等级2",
-            "全部"});
+            "<Choose the menu contains>",
+            "None",
+            "h1",
+            "h2",
+            "All"});
             this.comboBox1.Location = new System.Drawing.Point(28, 400);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(235, 20);
             this.comboBox1.TabIndex = 5;
-            this.comboBox1.Text = "<选择要包括的标题>";
+            this.comboBox1.Text = "<Choose the menu contains>";
             // 
             // button4
             // 
@@ -110,7 +110,7 @@ namespace ePUBee
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 7;
-            this.button4.Text = "保存为";
+            this.button4.Text = "Save as";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -123,7 +123,7 @@ namespace ePUBee
             this.groupBox1.Size = new System.Drawing.Size(481, 55);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "设置导出文件";
+            this.groupBox1.Text = "Output";
             // 
             // textBox1
             // 
@@ -142,7 +142,7 @@ namespace ePUBee
             toggleColumnHeader1.Pressed = false;
             toggleColumnHeader1.ScaleStyle = SynapticEffect.Forms.ColumnScaleStyle.Slide;
             toggleColumnHeader1.Selected = false;
-            toggleColumnHeader1.Text = "标题";
+            toggleColumnHeader1.Text = "title";
             toggleColumnHeader1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toggleColumnHeader1.Visible = true;
             toggleColumnHeader1.Width = 300;
@@ -152,7 +152,7 @@ namespace ePUBee
             toggleColumnHeader2.Pressed = false;
             toggleColumnHeader2.ScaleStyle = SynapticEffect.Forms.ColumnScaleStyle.Spring;
             toggleColumnHeader2.Selected = false;
-            toggleColumnHeader2.Text = "包含";
+            toggleColumnHeader2.Text = "contains";
             toggleColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toggleColumnHeader2.Visible = true;
             toggleColumnHeader3.Hovered = false;
@@ -161,7 +161,7 @@ namespace ePUBee
             toggleColumnHeader3.Pressed = false;
             toggleColumnHeader3.ScaleStyle = SynapticEffect.Forms.ColumnScaleStyle.Slide;
             toggleColumnHeader3.Selected = false;
-            toggleColumnHeader3.Text = "层次";
+            toggleColumnHeader3.Text = "lever";
             toggleColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toggleColumnHeader3.Visible = true;
             this.treeListView1.Columns.AddRange(new SynapticEffect.Forms.ToggleColumnHeader[] {
@@ -209,7 +209,7 @@ namespace ePUBee
             this.MinimizeBox = false;
             this.Name = "BuildPath";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "生成目录";
+            this.Text = "Generate Menus";
             this.Load += new System.EventHandler(this.BuildPath_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

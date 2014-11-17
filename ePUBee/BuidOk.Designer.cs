@@ -43,17 +43,17 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label1.Location = new System.Drawing.Point(99, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 16);
+            this.label1.Size = new System.Drawing.Size(170, 16);
             this.label1.TabIndex = 10;
-            this.label1.Text = "EPUB文件已成功生成";
+            this.label1.Text = "EPUB has published";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(123, 109);
+            this.button2.Location = new System.Drawing.Point(115, 109);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(86, 23);
             this.button2.TabIndex = 8;
-            this.button2.Text = "打开文件夹";
+            this.button2.Text = "Open Folder";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -83,7 +83,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 9;
-            this.button3.Text = "关闭";
+            this.button3.Text = "Close";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -101,7 +101,7 @@
             this.MinimizeBox = false;
             this.Name = "BuidOk";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "快速生成已完成";
+            this.Text = "EPUB has published";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

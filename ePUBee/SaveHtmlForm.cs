@@ -85,7 +85,7 @@ namespace ePUBee
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("是否确实要放弃发布！", "取消发布", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("ePUBee can't save the data if you cancle.", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 isok = false;
                 Close();

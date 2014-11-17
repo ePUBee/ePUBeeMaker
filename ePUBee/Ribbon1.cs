@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Word = Microsoft.Office.Interop.Word;
 using Microsoft.Office.Interop.Word;
 using Microsoft.Win32;
+//using System.Resources;
 
 namespace ePUBee
 {
@@ -29,6 +30,18 @@ namespace ePUBee
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
             Globals.ThisAddIn.Application.DocumentChange += new Word.ApplicationEvents4_DocumentChangeEventHandler(Application_DocumentChange);
             Globals.ThisAddIn.Application.DocumentOpen += new Word.ApplicationEvents4_DocumentOpenEventHandler(Application_DocumentOpen);
+
+            btnQuickPublish.Label = ePUBee.getLang.getString("quickpublish");
+            btnPublish.Label = ePUBee.getLang.getString("publish");
+            btnSaveAsPDF.Label = ePUBee.getLang.getString("saveaspdf");
+            btnAboutus.Label = ePUBee.getLang.getString("aboutus");
+            btnDonate.Label = ePUBee.getLang.getString("donate");
+            btnProcessing.Label = ePUBee.getLang.getString("Processing");
+
+
+            groupPubhish.Label = ePUBee.getLang.getString("publish");
+            groupOthers.Label = ePUBee.getLang.getString("others");
+            groupProcessing.Label = ePUBee.getLang.getString("publishing");
         }
 
         void Application_DocumentOpen(Word.Document Doc)
@@ -189,10 +202,10 @@ namespace ePUBee
         private void importxml(object obj)
         {
             Word.Document doc = (Word.Document)obj;
-
+            //throw new Exception("publish start, " + ePUBee.getLang.getString("publish"));
             if (doc.FullName.IndexOf(@"\") <= 0)
             {
-                MessageBox.Show("文件尚未保存,请先保存文件！");
+                MessageBox.Show("File has not saved, please save the file at first!");
                 return;
             }
             string lanstr = doc.Content.LanguageIDOther.ToString();
@@ -218,14 +231,14 @@ namespace ePUBee
             object attachment = false;
             object start = 0;
 
-            group6.Visible = true;
-            button1.Enabled = false;
+            groupProcessing.Visible = true;
+            btnQuickPublish.Enabled = false;
             timer1.Enabled = true;
 
             if (saveFileDialog2.ShowDialog() == DialogResult.Cancel)
             {
-                group6.Visible = false;
-                button1.Enabled = true;
+                groupProcessing.Visible = false;
+                btnQuickPublish.Enabled = true;
                 timer1.Enabled = false;
                 return;
             }
@@ -312,19 +325,19 @@ namespace ePUBee
             }
             catch (Exception err)
             {
-                group6.Visible = false;
-                button1.Enabled = true;
+                groupProcessing.Visible = false;
+                btnQuickPublish.Enabled = true;
                 timer1.Enabled = false;
                 MessageBox.Show(err.Message);
                 return;
             }
 
-            group6.Visible = false;
-            button1.Enabled = true;
+            groupProcessing.Visible = false;
+            btnQuickPublish.Enabled = true;
             timer1.Enabled = false;
 
             BuidOk bok = new BuidOk();
-            bok.linkLabel1.Text = "打开文件";
+            bok.linkLabel1.Text = "Open file";
             bok.linkLabel1.Tag = outfile;
             bok.ShowDialog();
         }
@@ -346,15 +359,15 @@ namespace ePUBee
 
             if (doc.FullName.IndexOf(@"\") <= 0)
             {
-                MessageBox.Show("文件尚未保存,请先保存文件！");
-                group6.Visible = false;
-                button2.Enabled = true;
+                MessageBox.Show("File has not saved, please save the file at first!");
+                groupProcessing.Visible = false;
+                btnPublish.Enabled = true;
                 timer1.Enabled = false;
                 return;
             }
 
-            group6.Visible = true;
-            button2.Enabled = false;
+            groupProcessing.Visible = true;
+            btnPublish.Enabled = false;
             timer1.Enabled = true;
 
             EPUB mEpub = new EPUB();
@@ -434,8 +447,8 @@ namespace ePUBee
             catch (Exception)
             {
                 mEpub.Clear();
-                group6.Visible = false;
-                button2.Enabled = true;
+                groupProcessing.Visible = false;
+                btnPublish.Enabled = true;
                 timer1.Enabled = false;
                 return;
             }
@@ -446,8 +459,8 @@ namespace ePUBee
             if (f.isok == false)
             {
                 mEpub.Clear();
-                group6.Visible = false;
-                button2.Enabled = true;
+                groupProcessing.Visible = false;
+                btnPublish.Enabled = true;
                 timer1.Enabled = false;
                 return;
             }
@@ -463,8 +476,8 @@ namespace ePUBee
             if (mEdit.isok == false)
             {
                 mEpub.Clear();
-                group6.Visible = false;
-                button2.Enabled = true;
+                groupProcessing.Visible = false;
+                btnPublish.Enabled = true;
                 timer1.Enabled = false;
                 return;
             }
@@ -478,8 +491,8 @@ namespace ePUBee
                 mEpub.WriteOpfContent();
                 mEpub.Buildfile(blp.textBox1.Text);
             }
-            group6.Visible = false;
-            button2.Enabled = true;
+            groupProcessing.Visible = false;
+            btnPublish.Enabled = true;
             timer1.Enabled = false;
         }
 
@@ -502,7 +515,7 @@ namespace ePUBee
 
             if (doc.FullName.IndexOf(@"\") <= 0)
             {
-                MessageBox.Show("文件尚未保存,请先保存文件！");
+                MessageBox.Show("File has not saved, please save the file at first!");
                 return;
             }
 
@@ -537,11 +550,11 @@ namespace ePUBee
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (ti > 4) ti = 0;
-            if (ti == 0) button13.Label = "正在生成";
-            if (ti == 1) button13.Label = "正在生成 . ";
-            if (ti == 2) button13.Label = "正在生成 . . ";
-            if (ti == 3) button13.Label = "正在生成 . . .";
-            if (ti == 4) button13.Label = "正在生成 . . . .";
+            if (ti == 0) btnProcessing.Label = ePUBee.getLang.getString("publishing");
+            if (ti == 1) btnProcessing.Label = ePUBee.getLang.getString("publishing") + " . ";
+            if (ti == 2) btnProcessing.Label = ePUBee.getLang.getString("publishing") + " . . ";
+            if (ti == 3) btnProcessing.Label = ePUBee.getLang.getString("publishing") + " . . .";
+            if (ti == 4) btnProcessing.Label = ePUBee.getLang.getString("publishing") + " . . . .";
             ti++;
         }
 
@@ -597,10 +610,14 @@ namespace ePUBee
 
         private void button11_Click(object sender, RibbonControlEventArgs e)
         {
-            Microsoft.Win32.RegistryKey Regobj = Microsoft.Win32.Registry.CurrentUser;
-            Microsoft.Win32.RegistryKey objItem = Regobj.OpenSubKey("Ispring", true);
-            string juankuanrul = objItem.GetValue("jkurl").ToString();
-            objItem.Close();
+            //Microsoft.Win32.RegistryKey Regobj = Microsoft.Win32.Registry.CurrentUser;
+            //Microsoft.Win32.RegistryKey objItem = Regobj.OpenSubKey("Ispring", true);
+            //string juankuanrul = objItem.GetValue("jkurl").ToString();
+            string juankuanrul = System.Configuration.ConfigurationSettings.AppSettings["siteurl"].ToString() + "/?utm_medium=soft&utm_source=donate&utm_campaign=donate&utm_content=ePUBeeMakerv" + System.Configuration.ConfigurationSettings.AppSettings["version"].ToString();
+            //MessageBox.Show(juankuanrul);
+            //juankuanrul = System.Configuration.ConfigurationManager.AppSettings[""];
+
+            //objItem.Close();
             System.Diagnostics.Process.Start(juankuanrul);
         }
 

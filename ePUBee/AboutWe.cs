@@ -14,6 +14,8 @@ namespace ePUBee
         public AboutWe()
         {
             InitializeComponent();
+            this.Text = ePUBee.getLang.getString("aboutus");
+            this.lblsoft.Text = "ePUBee Maker v" + System.Configuration.ConfigurationSettings.AppSettings["version"].ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -23,7 +25,12 @@ namespace ePUBee
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("http://epubee.com/?utm_medium=soft&utm_source=about&utm_campaign=about&utm_content=ePUBeeMakerv0.1.0.2");
+            System.Diagnostics.Process.Start(System.Configuration.ConfigurationSettings.AppSettings["siteurl"].ToString() + "/?utm_medium=soft&utm_source=about&utm_campaign=about&utm_content=ePUBeeMakerv" + System.Configuration.ConfigurationSettings.AppSettings["version"].ToString());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

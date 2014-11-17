@@ -100,7 +100,7 @@ namespace ePUBee
         {
             if (textBox1.Text.Length <= 0)
             {
-                MessageBox.Show("请选择一个输出路径！");
+                MessageBox.Show("please choose a path to save the book.");
                 return;
             }
 
@@ -132,7 +132,7 @@ namespace ePUBee
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("是否确实要放弃发布！", "取消发布", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show("ePUBee can't save the data if you cancle.", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 isok = false;
                 Close();
@@ -151,19 +151,25 @@ namespace ePUBee
         {
 
             XmlNodeList xnList = xmldoc.SelectNodes("//navPoint");
-            foreach (XmlNode n in xnList)
+            if (treeListView1.SelectedItems.Count > 0)
             {
-                if (n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml == treeListView1.SelectedNodes[0].Text)
+                foreach (XmlNode n in xnList)
                 {
-                    Renamencx rn = new Renamencx();
-                    rn.textBox1.Text = treeListView1.SelectedNodes[0].Text;
-                    if (rn.ShowDialog() == DialogResult.OK)
+                    if (n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml == treeListView1.SelectedNodes[0].Text)
                     {
-                        n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml = rn.textBox1.Text;
-                        treeListView1.SelectedNodes[0].Text = rn.textBox1.Text;
+                        Renamencx rn = new Renamencx();
+                        rn.textBox1.Text = treeListView1.SelectedNodes[0].Text;
+                        if (rn.ShowDialog() == DialogResult.OK)
+                        {
+                            n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml = rn.textBox1.Text;
+                            treeListView1.SelectedNodes[0].Text = rn.textBox1.Text;
+                        }
+                        return;
                     }
-                    return;
                 }
+            }
+            else {
+                MessageBox.Show("Please select an item.");
             }
         }
     }

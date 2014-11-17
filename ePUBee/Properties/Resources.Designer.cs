@@ -85,7 +85,7 @@ namespace ePUBee.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap _0504317 {
             get {
-                object obj = ResourceManager.GetObject("0504317", resourceCulture);
+                object obj = ResourceManager.GetObject("_0504317", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
