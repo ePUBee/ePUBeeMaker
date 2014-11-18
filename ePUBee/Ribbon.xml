@@ -3,37 +3,37 @@
     <ribbon>
         <tabs>
             <tab idMso="TabAddIns" label="EPUB Maker">
-                <group id="group1" label="发布">
+                <group id="group1" label="Publish">
                     <box id="box1">
-                        <button id="button1" onAction="button1_Click" label="快速发布" size="large" />
-                        <button id="button2" onAction="button2_Click" label="发布" size="large" />
+                        <button id="button1" onAction="button1_Click" label="Quick publish" size="large" />
+                        <button id="button2" onAction="button2_Click" label="Publish" size="large" />
                     </box>
                 </group>
-                <group id="group2" label="插入">
+                <group id="group2" label="Insert">
                     <box id="box2">
-                        <button id="button3" label="测试" size="large" />
+                        <button id="button3" label="Test" size="large" />
                         <button id="button4" label="Flash" size="large" />
                         <button id="button5" label="You Tube" size="large" />
                     </box>
                 </group>
-                <group id="group3" label="关于">
+                <group id="group3" label="About">
                     <box id="box3">
-                        <button id="button6" label="更新" size="large" />
-                        <button id="button7" label="关于" size="large" />
-                        <button id="button8" label="升级为专业版" size="large" />
+                        <button id="button6" label="Update" size="large" />
+                        <button id="button7" label="About" size="large" />
+                        <button id="button8" label="Upgrade to Pro" size="large" />
                     </box>
                 </group>
-                <group id="group4" label="关注我们">
+                <group id="group4" label="Follow us">
                     <box id="box4">
                         <button id="button9" label="FaceBook" size="large" />
                     </box>
                 </group>
             </tab>
-            <tab id="tab2" label="其他">
-                <group id="group5" label="其他">
-                    <button id="button10" label="另存为PDF" size="large" />
-                    <button id="button12" label="关于我们" size="large" />
-                    <button id="button11" label="捐款" size="large" />
+            <tab id="tab2" label="Others">
+                <group id="group5" label="Others">
+                    <button id="button10" label="SaveAs PDF" size="large" />
+                    <button id="button12" label="About us" size="large" />
+                    <button id="button11" label="Donate" size="large" />
                 </group>
             </tab>
         </tabs>

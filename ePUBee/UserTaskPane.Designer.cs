@@ -159,7 +159,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(242, 22);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "搜索文档";
+            this.textBox1.Text = "Search file";
             // 
             // UserTaskPane
             // 

@@ -212,7 +212,7 @@
             // 
             this.btnQuickPublish.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.btnQuickPublish.Image = global::ePUBee.Properties.Resources.qpost;
-            this.btnQuickPublish.Label = "快速发布";
+            this.btnQuickPublish.Label = "Quick publish";
             this.btnQuickPublish.Name = "btnQuickPublish";
             this.btnQuickPublish.ShowImage = true;
             this.btnQuickPublish.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button1_Click);
@@ -221,7 +221,7 @@
             // 
             this.btnPublish.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.btnPublish.Image = global::ePUBee.Properties.Resources.post;
-            this.btnPublish.Label = "发布";
+            this.btnPublish.Label = "Publish";
             this.btnPublish.Name = "btnPublish";
             this.btnPublish.ShowImage = true;
             this.btnPublish.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button2_Click);
@@ -247,7 +247,7 @@
             // 
             this.btnAboutus.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.btnAboutus.Image = global::ePUBee.Properties.Resources.about_we;
-            this.btnAboutus.Label = "关于我们";
+            this.btnAboutus.Label = "About us";
             this.btnAboutus.Name = "btnAboutus";
             this.btnAboutus.ShowImage = true;
             this.btnAboutus.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button12_Click);
@@ -256,7 +256,7 @@
             // 
             this.btnDonate.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.btnDonate.Image = global::ePUBee.Properties.Resources.juankuan;
-            this.btnDonate.Label = "捐款";
+            this.btnDonate.Label = "Donate";
             this.btnDonate.Name = "btnDonate";
             this.btnDonate.ShowImage = true;
             this.btnDonate.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button11_Click);

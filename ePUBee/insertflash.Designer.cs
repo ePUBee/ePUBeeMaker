@@ -65,7 +65,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 16);
             this.label1.TabIndex = 11;
-            this.label1.Text = "向WORD插入FLASH";
+            this.label1.Text = "Insert FLASH";
             // 
             // button2
             // 
@@ -73,7 +73,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 18;
-            this.button2.Text = "确定";
+            this.button2.Text = " Confirm ";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -83,7 +83,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 19;
-            this.button3.Text = "关闭";
+            this.button3.Text = "Close";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -124,7 +124,7 @@
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(72, 16);
             this.checkBox1.TabIndex = 28;
-            this.checkBox1.Text = "自动播放";
+            this.checkBox1.Text = "Auto play";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label4
@@ -134,7 +134,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 27;
-            this.label4.Text = "宽度：";
+            this.label4.Text = "Width:";
             // 
             // label3
             // 
@@ -183,14 +183,14 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 21;
-            this.button1.Text = "本地文件";
+            this.button1.Text = "Local file";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "FLASH 文件|*.swf";
+            this.openFileDialog1.Filter = "FLASH file|*.swf";
             // 
             // insertflash
             // 

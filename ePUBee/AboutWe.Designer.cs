@@ -68,7 +68,7 @@
             this.lblsoft.Name = "lblsoft";
             this.lblsoft.Size = new System.Drawing.Size(197, 16);
             this.lblsoft.TabIndex = 1;
-            this.lblsoft.Text = "ePUBee Maker v1.10.24";
+            this.lblsoft.Text = "ePUBee Maker";
             // 
             // label2
             // 

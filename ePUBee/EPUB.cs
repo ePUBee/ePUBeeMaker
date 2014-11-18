@@ -490,7 +490,7 @@ namespace ePUBee
                 binWriter.Close();
             }
 
-            CharperList.Add(chapterName, ("章节" + iCharpter));
+            CharperList.Add(chapterName, ("chapter" + iCharpter));
             XmlElement itemref = OpfDoc.CreateElement("itemref");
             itemref.SetAttribute("idref", chapterName + ".xhtml");
             OpfDoc.SelectSingleNode("package/spine").AppendChild(itemref);

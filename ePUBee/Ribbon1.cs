@@ -36,7 +36,7 @@ namespace ePUBee
             btnSaveAsPDF.Label = ePUBee.getLang.getString("saveaspdf");
             btnAboutus.Label = ePUBee.getLang.getString("aboutus");
             btnDonate.Label = ePUBee.getLang.getString("donate");
-            btnProcessing.Label = ePUBee.getLang.getString("Processing");
+            btnProcessing.Label = ePUBee.getLang.getString("processing");
 
 
             groupPubhish.Label = ePUBee.getLang.getString("publish");
@@ -629,7 +629,7 @@ namespace ePUBee
 
         private void button3_Click(object sender, RibbonControlEventArgs e)
         {
-            MessageBox.Show("测试");
+            MessageBox.Show(" test ");
         }
 
         private void button8_Click(object sender, RibbonControlEventArgs e)

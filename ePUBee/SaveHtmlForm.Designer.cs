@@ -65,7 +65,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Cancle";
+            this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -81,7 +81,7 @@
             // 
             // openFileDialog1
             // 
-            this.openFileDialog1.Filter = "所有文件|*.*|GIF文件|*.gif|JPEG文件|*.jpg|PNG文件|*.png";
+            this.openFileDialog1.Filter = "All|*.*|GIF file|*.gif|JPEG file|*.jpg|PNG file|*.png";
             // 
             // listBox1
             // 

@@ -22,6 +22,7 @@ namespace ePUBee
         }
         public lang()
         {
+            if (langstr.Count == 0) { 
             langstr.Add("quickpublish", "Quick Publish");
             langstr.Add("publish", "Publish");
             langstr.Add("saveaspdf", "SaveAs PDF");
@@ -44,6 +45,7 @@ namespace ePUBee
             //langstr.Add("", "");
             //langstr.Add("", "");
             //langstr.Add("", "");
+            }
         }
     }
 }
