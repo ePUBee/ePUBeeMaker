@@ -118,36 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="aboutus" xml:space="preserve">
-    <value>Aboutus</value>
+    <value>关于我们</value>
   </data>
   <data name="cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>取消</value>
   </data>
   <data name="confirm" xml:space="preserve">
-    <value>Confirm</value>
+    <value>确定</value>
   </data>
   <data name="donate" xml:space="preserve">
-    <value>Donate</value>
+    <value>捐款</value>
   </data>
   <data name="ok" xml:space="preserve">
-    <value>OK</value>
+    <value>确定</value>
   </data>
   <data name="others" xml:space="preserve">
-    <value>Others</value>
+    <value>其它</value>
   </data>
   <data name="processing" xml:space="preserve">
-    <value>Processing</value>
+    <value>执行中</value>
   </data>
   <data name="publish" xml:space="preserve">
-    <value>Publish</value>
+    <value>发布</value>
   </data>
   <data name="publishing" xml:space="preserve">
-    <value>Publishing</value>
+    <value>发布中</value>
   </data>
   <data name="quickpublish" xml:space="preserve">
-    <value>Quick Publish Default</value>
+    <value>快速发布</value>
   </data>
   <data name="saveaspdf" xml:space="preserve">
-    <value>SaveAs PDF</value>
+    <value>另存为PDF</value>
   </data>
 </root>

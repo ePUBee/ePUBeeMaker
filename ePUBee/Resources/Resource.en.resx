@@ -145,7 +145,7 @@
     <value>Publishing</value>
   </data>
   <data name="quickpublish" xml:space="preserve">
-    <value>Quick Publish Default</value>
+    <value>Quick Publish</value>
   </data>
   <data name="saveaspdf" xml:space="preserve">
     <value>SaveAs PDF</value>

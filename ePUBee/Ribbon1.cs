@@ -38,6 +38,8 @@ namespace ePUBee
             btnDonate.Label = ePUBee.getLang.getString("donate");
             btnProcessing.Label = ePUBee.getLang.getString("processing");
 
+            //btnQuickPublish.Label = Resources.Resource.ResourceManager.GetString("quickpublish");
+
 
             groupPubhish.Label = ePUBee.getLang.getString("publish");
             groupOthers.Label = ePUBee.getLang.getString("others");

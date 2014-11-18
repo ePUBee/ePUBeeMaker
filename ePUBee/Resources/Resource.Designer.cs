@@ -59,5 +59,104 @@ namespace ePUBee.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找类似 Aboutus 的本地化字符串。
+        /// </summary>
+        internal static string aboutus {
+            get {
+                return ResourceManager.GetString("aboutus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Cancel 的本地化字符串。
+        /// </summary>
+        internal static string cancel {
+            get {
+                return ResourceManager.GetString("cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Confirm 的本地化字符串。
+        /// </summary>
+        internal static string confirm {
+            get {
+                return ResourceManager.GetString("confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Donate 的本地化字符串。
+        /// </summary>
+        internal static string donate {
+            get {
+                return ResourceManager.GetString("donate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 OK 的本地化字符串。
+        /// </summary>
+        internal static string ok {
+            get {
+                return ResourceManager.GetString("ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Others 的本地化字符串。
+        /// </summary>
+        internal static string others {
+            get {
+                return ResourceManager.GetString("others", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Processing 的本地化字符串。
+        /// </summary>
+        internal static string processing {
+            get {
+                return ResourceManager.GetString("processing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Publish 的本地化字符串。
+        /// </summary>
+        internal static string publish {
+            get {
+                return ResourceManager.GetString("publish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Publishing 的本地化字符串。
+        /// </summary>
+        internal static string publishing {
+            get {
+                return ResourceManager.GetString("publishing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Quick Publish Default 的本地化字符串。
+        /// </summary>
+        internal static string quickpublish {
+            get {
+                return ResourceManager.GetString("quickpublish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 SaveAs PDF 的本地化字符串。
+        /// </summary>
+        internal static string saveaspdf {
+            get {
+                return ResourceManager.GetString("saveaspdf", resourceCulture);
+            }
+        }
     }
 }
