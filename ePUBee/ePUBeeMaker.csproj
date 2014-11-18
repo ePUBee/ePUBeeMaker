@@ -41,7 +41,7 @@
     <PublishUrl>E:\ePUBeeMaker\Release\</PublishUrl>
     <InstallUrl />
     <TargetCulture>en</TargetCulture>
-    <ApplicationVersion>0.1.0.92</ApplicationVersion>
+    <ApplicationVersion>0.1.0.93</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -265,29 +265,23 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="about.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="about.Designer.cs">
-      <DependentUpon>about.cs</DependentUpon>
-    </Compile>
     <Compile Include="AboutWe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AboutWe.Designer.cs">
       <DependentUpon>AboutWe.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRoles.Designer.cs">
+      <DependentUpon>AddRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddBasic.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddBasic.Designer.cs">
       <DependentUpon>AddBasic.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddRole.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddRole.Designer.cs">
-      <DependentUpon>AddRole.cs</DependentUpon>
     </Compile>
     <Compile Include="BuidOk.cs">
       <SubType>Form</SubType>
@@ -326,11 +320,6 @@
     <Compile Include="Renamencx.Designer.cs">
       <DependentUpon>Renamencx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
     <Compile Include="Resources\Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -353,19 +342,15 @@
       <DependentUpon>UserTaskPane.cs</DependentUpon>
     </Compile>
     <Compile Include="XHtmlTools.cs" />
-    <EmbeddedResource Include="about.resx">
-      <DependentUpon>about.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="AboutWe.resx">
       <DependentUpon>AboutWe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddBasic.resx">
-      <DependentUpon>AddBasic.cs</DependentUpon>
+    <EmbeddedResource Include="AddRoles.resx">
+      <DependentUpon>AddRoles.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddRole.resx">
-      <DependentUpon>AddRole.cs</DependentUpon>
+    <EmbeddedResource Include="AddBasic.resx">
+      <DependentUpon>AddBasic.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="BuidOk.resx">
@@ -396,11 +381,6 @@
       <DependentUpon>Renamencx.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Resource.en.resx" />
     <EmbeddedResource Include="Resources\Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>

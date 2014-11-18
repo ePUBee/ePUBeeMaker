@@ -10,7 +10,7 @@ namespace ePUBee
     class getLang { 
         public static String getString(String str){
             //return Resources.Resource.ResourceManager.GetString(str, System.Globalization.CultureInfo.CreateSpecificCulture("zh-TW"));
-            return Resources.Resource.ResourceManager.GetString(str);
+            return Resources.Resource.ResourceManager.GetString(str.ToLower());
             //lang langlist = new lang();
             //return langlist.getString(str);
 

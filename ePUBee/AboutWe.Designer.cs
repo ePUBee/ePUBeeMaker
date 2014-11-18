@@ -31,17 +31,20 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblsoft = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.lbllicense = new System.Windows.Forms.Label();
+            this.lblauthor = new System.Windows.Forms.Label();
+            this.lblwebsite = new System.Windows.Forms.Label();
+            this.lblcontact = new System.Windows.Forms.Label();
+            this.linkLabelwebsite_value = new System.Windows.Forms.LinkLabel();
+            this.lbllicense_value = new System.Windows.Forms.Label();
+            this.lblcontact_value = new System.Windows.Forms.Label();
+            this.lblauthor_value = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(227, 172);
+            this.btnOk.Location = new System.Drawing.Point(257, 176);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 10;
@@ -51,7 +54,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ePUBee.Properties.Resources.about_we;
+            this.pictureBox1.Image = global::ePUBee.Properties.Resources.about_we1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(58, 50);
@@ -62,72 +65,103 @@
             // lblsoft
             // 
             this.lblsoft.AutoSize = true;
-            this.lblsoft.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblsoft.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblsoft.ForeColor = System.Drawing.SystemColors.Desktop;
             this.lblsoft.Location = new System.Drawing.Point(92, 28);
             this.lblsoft.Name = "lblsoft";
-            this.lblsoft.Size = new System.Drawing.Size(197, 16);
+            this.lblsoft.Size = new System.Drawing.Size(116, 16);
             this.lblsoft.TabIndex = 1;
             this.lblsoft.Text = "ePUBee Maker";
             // 
-            // label2
+            // lbllicense
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 12);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "License： freeware";
+            this.lbllicense.Location = new System.Drawing.Point(80, 71);
+            this.lbllicense.Name = "lbllicense";
+            this.lbllicense.Size = new System.Drawing.Size(72, 14);
+            this.lbllicense.TabIndex = 2;
+            this.lbllicense.Text = "License:";
+            this.lbllicense.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // lblauthor
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(100, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 12);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Author： ePUBee";
+            this.lblauthor.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblauthor.Location = new System.Drawing.Point(80, 93);
+            this.lblauthor.Name = "lblauthor";
+            this.lblauthor.Size = new System.Drawing.Size(72, 14);
+            this.lblauthor.TabIndex = 3;
+            this.lblauthor.Text = "Author:";
+            this.lblauthor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label4
+            // lblwebsite
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 12);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Website：";
+            this.lblwebsite.Location = new System.Drawing.Point(80, 114);
+            this.lblwebsite.Name = "lblwebsite";
+            this.lblwebsite.Size = new System.Drawing.Size(72, 14);
+            this.lblwebsite.TabIndex = 4;
+            this.lblwebsite.Text = "Website:";
+            this.lblwebsite.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // lblcontact
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(92, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 12);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Contact： support@epubee.com";
+            this.lblcontact.Location = new System.Drawing.Point(80, 137);
+            this.lblcontact.Name = "lblcontact";
+            this.lblcontact.Size = new System.Drawing.Size(72, 14);
+            this.lblcontact.TabIndex = 5;
+            this.lblcontact.Text = "Contact: ";
+            this.lblcontact.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // linkLabel1
+            // linkLabelwebsite_value
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(158, 114);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(107, 12);
-            this.linkLabel1.TabIndex = 11;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "http://epubee.com";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabelwebsite_value.AutoSize = true;
+            this.linkLabelwebsite_value.Location = new System.Drawing.Point(158, 114);
+            this.linkLabelwebsite_value.Name = "linkLabelwebsite_value";
+            this.linkLabelwebsite_value.Size = new System.Drawing.Size(107, 12);
+            this.linkLabelwebsite_value.TabIndex = 11;
+            this.linkLabelwebsite_value.TabStop = true;
+            this.linkLabelwebsite_value.Text = "http://epubee.com";
+            this.linkLabelwebsite_value.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // lbllicense_value
+            // 
+            this.lbllicense_value.AutoSize = true;
+            this.lbllicense_value.Location = new System.Drawing.Point(158, 71);
+            this.lbllicense_value.Name = "lbllicense_value";
+            this.lbllicense_value.Size = new System.Drawing.Size(179, 12);
+            this.lbllicense_value.TabIndex = 12;
+            this.lbllicense_value.Text = "GNU General Public License v3";
+            // 
+            // lblcontact_value
+            // 
+            this.lblcontact_value.AutoSize = true;
+            this.lblcontact_value.Location = new System.Drawing.Point(158, 137);
+            this.lblcontact_value.Name = "lblcontact_value";
+            this.lblcontact_value.Size = new System.Drawing.Size(113, 12);
+            this.lblcontact_value.TabIndex = 13;
+            this.lblcontact_value.Text = "support@epubee.com";
+            // 
+            // lblauthor_value
+            // 
+            this.lblauthor_value.AutoSize = true;
+            this.lblauthor_value.Location = new System.Drawing.Point(158, 93);
+            this.lblauthor_value.Name = "lblauthor_value";
+            this.lblauthor_value.Size = new System.Drawing.Size(41, 12);
+            this.lblauthor_value.TabIndex = 14;
+            this.lblauthor_value.Text = "ePUBee";
             // 
             // AboutWe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 210);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(363, 211);
+            this.Controls.Add(this.lblauthor_value);
+            this.Controls.Add(this.lblcontact_value);
+            this.Controls.Add(this.lbllicense_value);
+            this.Controls.Add(this.linkLabelwebsite_value);
             this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblcontact);
+            this.Controls.Add(this.lblwebsite);
+            this.Controls.Add(this.lblauthor);
+            this.Controls.Add(this.lbllicense);
             this.Controls.Add(this.lblsoft);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -141,16 +175,29 @@
             this.PerformLayout();
 
         }
-
         #endregion
+        private void _translate()
+        {
+            this.Text = Resources.Resource.aboutus;
+            this.lblwebsite.Text = Resources.Resource.website + ":";
+            this.lbllicense.Text = Resources.Resource.license + ":";
+            this.lblauthor.Text = Resources.Resource.author + ":";
+            this.lblcontact.Text = Resources.Resource.contact + ":";
+            this.btnOk.Text = Resources.Resource.ok;
+            this.lblsoft.Text = "ePUBee Maker v" + System.Configuration.ConfigurationSettings.AppSettings["version"].ToString();
+            //this.lblHtml.Text = "<a href='http://epubee.com'>http://epubee.com</a>";
+        }
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblsoft;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbllicense;
+        private System.Windows.Forms.Label lblauthor;
+        private System.Windows.Forms.Label lblwebsite;
+        private System.Windows.Forms.Label lblcontact;
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabelwebsite_value;
+        private System.Windows.Forms.Label lbllicense_value;
+        private System.Windows.Forms.Label lblcontact_value;
+        private System.Windows.Forms.Label lblauthor_value;
     }
 }

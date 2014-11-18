@@ -120,17 +120,32 @@
   <data name="aboutus" xml:space="preserve">
     <value>Aboutus</value>
   </data>
+  <data name="author" xml:space="preserve">
+    <value>Author</value>
+  </data>
   <data name="cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
   <data name="confirm" xml:space="preserve">
     <value>Confirm</value>
   </data>
+  <data name="contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
   <data name="donate" xml:space="preserve">
     <value>Donate</value>
   </data>
+  <data name="filehasnotsavedpleasesavethefileatfirst" xml:space="preserve">
+    <value>File has not saved, please save the file at first!</value>
+  </data>
+  <data name="license" xml:space="preserve">
+    <value>License</value>
+  </data>
   <data name="ok" xml:space="preserve">
     <value>OK</value>
+  </data>
+  <data name="openfile" xml:space="preserve">
+    <value>Open file</value>
   </data>
   <data name="others" xml:space="preserve">
     <value>Others</value>
@@ -145,9 +160,125 @@
     <value>Publishing</value>
   </data>
   <data name="quickpublish" xml:space="preserve">
-    <value>Quick Publish Default</value>
+    <value>Quick Publish</value>
   </data>
   <data name="saveaspdf" xml:space="preserve">
     <value>SaveAs PDF</value>
+  </data>
+  <data name="website" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="addbasic" xml:space="preserve">
+    <value>Add basic</value>
+  </data>
+  <data name="addroles" xml:space="preserve">
+    <value>Add roles</value>
+  </data>
+  <data name="all" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="choosethemenucontains" xml:space="preserve">
+    <value>Choose the menu contains</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="contains" xml:space="preserve">
+    <value>Contains</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="editmetas" xml:space="preserve">
+    <value>Edit Metas</value>
+    <comment>MetaEdit</comment>
+  </data>
+  <data name="epubeecantsavethedataifyoucancel" xml:space="preserve">
+    <value>ePUBee can't save the data if you cancel.</value>
+  </data>
+  <data name="fileas" xml:space="preserve">
+    <value>file as</value>
+  </data>
+  <data name="filesinthebook" xml:space="preserve">
+    <value>Files in the book</value>
+    <comment>SaveHtmlForm</comment>
+  </data>
+  <data name="generatemenus" xml:space="preserve">
+    <value>Generate Menus</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="h1" xml:space="preserve">
+    <value>h1</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="h2" xml:space="preserve">
+    <value>h2</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="key" xml:space="preserve">
+    <value>key</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lever" xml:space="preserve">
+    <value>Lever</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="none" xml:space="preserve">
+    <value>None</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="otherfile" xml:space="preserve">
+    <value>Other File</value>
+    <comment>SaveHtmlForm</comment>
+  </data>
+  <data name="output" xml:space="preserve">
+    <value>Output</value>
+  </data>
+  <data name="pleasechooseapathtosavethebook" xml:space="preserve">
+    <value>please choose a path to save the book.</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="rename" xml:space="preserve">
+    <value>Rename</value>
+  </data>
+  <data name="renamethemenu" xml:space="preserve">
+    <value>Rename the menu</value>
+    <comment>Rename</comment>
+  </data>
+  <data name="roles" xml:space="preserve">
+    <value>roles</value>
+  </data>
+  <data name="saveas" xml:space="preserve">
+    <value>Save as</value>
+  </data>
+  <data name="select" xml:space="preserve">
+    <value>select</value>
+    <comment>SaveHtmlForm</comment>
+  </data>
+  <data name="selectcover" xml:space="preserve">
+    <value>Select Cover</value>
+  </data>
+  <data name="showmenusonly" xml:space="preserve">
+    <value>Show Menus Only</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="value" xml:space="preserve">
+    <value>value</value>
+  </data>
+  <data name="video" xml:space="preserve">
+    <value>Video</value>
   </data>
 </root>

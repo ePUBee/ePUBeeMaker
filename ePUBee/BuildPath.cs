@@ -18,6 +18,7 @@ namespace ePUBee
         public BuildPath()
         {
             InitializeComponent();
+            _translate();
         }
 
         public void addtolist(XmlNode n, SynapticEffect.Forms.TreeListNode t)
@@ -56,7 +57,7 @@ namespace ePUBee
         private void BuildPath_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
-            treeListView1.LabelEdit = true;
+            treeListView_Menu.LabelEdit = true;
             try
             {
                 XmlNodeList xnList = xmldoc.SelectNodes("//navPoint");
@@ -64,9 +65,9 @@ namespace ePUBee
                 {
                     if (n.ParentNode.Name.IndexOf("navPoint") >= 1)
                     {
-                        for (int i = treeListView1.Nodes.Count - 1; i >= 0; i--)
+                        for (int i = treeListView_Menu.Nodes.Count - 1; i >= 0; i--)
                         {
-                            if (treeListView1.Nodes[i].Text == n.ParentNode.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml)
+                            if (treeListView_Menu.Nodes[i].Text == n.ParentNode.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml)
                             {
                                 SynapticEffect.Forms.TreeListNode tt = new SynapticEffect.Forms.TreeListNode();
                                 CheckBox cb = new CheckBox();
@@ -74,7 +75,7 @@ namespace ePUBee
                                 tt.Text = n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml;
                                 tt.SubItems.Add(cb);
                                 tt.SubItems.Add(n.Prefix);
-                                treeListView1.Nodes[i].Nodes.Add(tt);
+                                treeListView_Menu.Nodes[i].Nodes.Add(tt);
                             }
                         }
                     }
@@ -86,7 +87,7 @@ namespace ePUBee
                         tn.Text = n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml;
                         tn.SubItems.Add(cbox);
                         tn.SubItems.Add(n.Prefix);
-                        treeListView1.Nodes.Add(tn);
+                        treeListView_Menu.Nodes.Add(tn);
                     }
                 }
             }
@@ -98,16 +99,16 @@ namespace ePUBee
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length <= 0)
+            if (txtPath.Text.Length <= 0)
             {
-                MessageBox.Show("please choose a path to save the book.");
+                MessageBox.Show(Resources.Resource.pleasechooseapathtosavethebook);
                 return;
             }
 
             try
             {
                 XmlNodeList xnList = xmldoc.SelectNodes("//navPoint");
-                foreach (SynapticEffect.Forms.TreeListNode Node in treeListView1.Nodes)
+                foreach (SynapticEffect.Forms.TreeListNode Node in treeListView_Menu.Nodes)
                 {
                     foreach (XmlNode n in xnList)
                     {
@@ -132,7 +133,7 @@ namespace ePUBee
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("ePUBee can't save the data if you cancle.", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show(Resources.Resource.epubeecantsavethedataifyoucancel, Resources.Resource.confirm, MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 isok = false;
                 Close();
@@ -143,7 +144,7 @@ namespace ePUBee
         {
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                textBox1.Text = saveFileDialog1.FileName;
+                txtPath.Text = saveFileDialog1.FileName;
             }
         }
 
@@ -157,14 +158,14 @@ namespace ePUBee
             //{//
                 foreach (XmlNode n in xnList)
                 {
-                    if (n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml == treeListView1.SelectedNodes[0].Text)
+                    if (n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml == treeListView_Menu.SelectedNodes[0].Text)
                     {
                         Renamencx rn = new Renamencx();
-                        rn.textBox1.Text = treeListView1.SelectedNodes[0].Text;
+                        rn.txtContents.Text = treeListView_Menu.SelectedNodes[0].Text;
                         if (rn.ShowDialog() == DialogResult.OK)
                         {
-                            n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml = rn.textBox1.Text;
-                            treeListView1.SelectedNodes[0].Text = rn.textBox1.Text;
+                            n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml = rn.txtContents.Text;
+                            treeListView_Menu.SelectedNodes[0].Text = rn.txtContents.Text;
                         }
                         return;
                     }

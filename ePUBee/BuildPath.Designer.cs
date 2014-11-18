@@ -33,109 +33,109 @@ namespace ePUBee
             SynapticEffect.Forms.ToggleColumnHeader toggleColumnHeader1 = new SynapticEffect.Forms.ToggleColumnHeader();
             SynapticEffect.Forms.ToggleColumnHeader toggleColumnHeader2 = new SynapticEffect.Forms.ToggleColumnHeader();
             SynapticEffect.Forms.ToggleColumnHeader toggleColumnHeader3 = new SynapticEffect.Forms.ToggleColumnHeader();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnRename = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.checkBox_only = new System.Windows.Forms.CheckBox();
+            this.comboBox_spliter = new System.Windows.Forms.ComboBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button4 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.treeListView1 = new SynapticEffect.Forms.TreeListView();
+            this.btnSaveas = new System.Windows.Forms.Button();
+            this.groupBox_output = new System.Windows.Forms.GroupBox();
+            this.txtPath = new System.Windows.Forms.TextBox();
+            this.treeListView_Menu = new SynapticEffect.Forms.TreeListView();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.groupBox1.SuspendLayout();
+            this.groupBox_output.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnRename
             // 
-            this.button1.Location = new System.Drawing.Point(500, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "rename";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRename.Location = new System.Drawing.Point(500, 12);
+            this.btnRename.Name = "btnRename";
+            this.btnRename.Size = new System.Drawing.Size(75, 23);
+            this.btnRename.TabIndex = 0;
+            this.btnRename.Text = "rename";
+            this.btnRename.UseVisualStyleBackColor = true;
+            this.btnRename.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnConfirm
             // 
-            this.button2.Location = new System.Drawing.Point(394, 400);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Confirm";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnConfirm.Location = new System.Drawing.Point(394, 400);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirm.TabIndex = 1;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btnCancel
             // 
-            this.button3.Location = new System.Drawing.Point(499, 400);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCancel.Location = new System.Drawing.Point(499, 400);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.button3_Click);
             // 
-            // checkBox1
+            // checkBox_only
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Location = new System.Drawing.Point(28, 378);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 16);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Show menus only";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox_only.AutoSize = true;
+            this.checkBox_only.Checked = true;
+            this.checkBox_only.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_only.Location = new System.Drawing.Point(28, 378);
+            this.checkBox_only.Name = "checkBox_only";
+            this.checkBox_only.Size = new System.Drawing.Size(114, 16);
+            this.checkBox_only.TabIndex = 3;
+            this.checkBox_only.Text = "Show menus only";
+            this.checkBox_only.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // comboBox_spliter
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_spliter.FormattingEnabled = true;
+            this.comboBox_spliter.Items.AddRange(new object[] {
             "<Choose the menu contains>",
             "None",
             "h1",
             "h2",
             "All"});
-            this.comboBox1.Location = new System.Drawing.Point(28, 400);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(235, 20);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.Text = "<Choose the menu contains>";
+            this.comboBox_spliter.Location = new System.Drawing.Point(28, 400);
+            this.comboBox_spliter.Name = "comboBox_spliter";
+            this.comboBox_spliter.Size = new System.Drawing.Size(235, 20);
+            this.comboBox_spliter.TabIndex = 5;
+            this.comboBox_spliter.Text = "<Choose the menu contains>";
             // 
-            // button4
+            // btnSaveas
             // 
-            this.button4.Location = new System.Drawing.Point(400, 20);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Save as";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnSaveas.Location = new System.Drawing.Point(400, 20);
+            this.btnSaveas.Name = "btnSaveas";
+            this.btnSaveas.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveas.TabIndex = 7;
+            this.btnSaveas.Text = "Save as";
+            this.btnSaveas.UseVisualStyleBackColor = true;
+            this.btnSaveas.Click += new System.EventHandler(this.button4_Click);
             // 
-            // groupBox1
+            // groupBox_output
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Location = new System.Drawing.Point(13, 317);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 55);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Output";
+            this.groupBox_output.Controls.Add(this.txtPath);
+            this.groupBox_output.Controls.Add(this.btnSaveas);
+            this.groupBox_output.Location = new System.Drawing.Point(13, 317);
+            this.groupBox_output.Name = "groupBox_output";
+            this.groupBox_output.Size = new System.Drawing.Size(481, 55);
+            this.groupBox_output.TabIndex = 8;
+            this.groupBox_output.TabStop = false;
+            this.groupBox_output.Text = "Output";
             // 
-            // textBox1
+            // txtPath
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(367, 21);
-            this.textBox1.TabIndex = 8;
+            this.txtPath.Location = new System.Drawing.Point(15, 20);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.Size = new System.Drawing.Size(367, 21);
+            this.txtPath.TabIndex = 8;
             // 
-            // treeListView1
+            // treeListView_Menu
             // 
-            this.treeListView1.BackColor = System.Drawing.SystemColors.Window;
-            this.treeListView1.CaptureFocusClick = true;
+            this.treeListView_Menu.BackColor = System.Drawing.SystemColors.Window;
+            this.treeListView_Menu.CaptureFocusClick = true;
             toggleColumnHeader1.Hovered = false;
             toggleColumnHeader1.Image = null;
             toggleColumnHeader1.Index = 0;
@@ -164,55 +164,55 @@ namespace ePUBee
             toggleColumnHeader3.Text = "lever";
             toggleColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             toggleColumnHeader3.Visible = true;
-            this.treeListView1.Columns.AddRange(new SynapticEffect.Forms.ToggleColumnHeader[] {
+            this.treeListView_Menu.Columns.AddRange(new SynapticEffect.Forms.ToggleColumnHeader[] {
             toggleColumnHeader1,
             toggleColumnHeader2,
             toggleColumnHeader3});
-            this.treeListView1.ColumnSortColor = System.Drawing.Color.Gainsboro;
-            this.treeListView1.ColumnTrackColor = System.Drawing.Color.WhiteSmoke;
-            this.treeListView1.FullRowSelect = false;
-            this.treeListView1.GridLineColor = System.Drawing.Color.WhiteSmoke;
-            this.treeListView1.HeaderMenu = null;
-            this.treeListView1.HideSelection = false;
-            this.treeListView1.ItemHeight = 20;
-            this.treeListView1.ItemMenu = null;
-            this.treeListView1.LabelEdit = true;
-            this.treeListView1.Location = new System.Drawing.Point(13, 12);
-            this.treeListView1.MouseActivte = true;
-            this.treeListView1.MultiSelect = true;
-            this.treeListView1.Name = "treeListView1";
-            this.treeListView1.RowSelectColor = System.Drawing.SystemColors.Highlight;
-            this.treeListView1.RowTrackColor = System.Drawing.Color.WhiteSmoke;
-            this.treeListView1.Size = new System.Drawing.Size(481, 280);
-            this.treeListView1.SmallImageList = null;
-            this.treeListView1.StateImageList = null;
-            this.treeListView1.TabIndex = 9;
-            this.treeListView1.Text = "treeListView1";
+            this.treeListView_Menu.ColumnSortColor = System.Drawing.Color.Gainsboro;
+            this.treeListView_Menu.ColumnTrackColor = System.Drawing.Color.WhiteSmoke;
+            this.treeListView_Menu.FullRowSelect = false;
+            this.treeListView_Menu.GridLineColor = System.Drawing.Color.WhiteSmoke;
+            this.treeListView_Menu.HeaderMenu = null;
+            this.treeListView_Menu.HideSelection = false;
+            this.treeListView_Menu.ItemHeight = 20;
+            this.treeListView_Menu.ItemMenu = null;
+            this.treeListView_Menu.LabelEdit = true;
+            this.treeListView_Menu.Location = new System.Drawing.Point(11, 12);
+            this.treeListView_Menu.MouseActivte = true;
+            this.treeListView_Menu.MultiSelect = true;
+            this.treeListView_Menu.Name = "treeListView_Menu";
+            this.treeListView_Menu.RowSelectColor = System.Drawing.SystemColors.Highlight;
+            this.treeListView_Menu.RowTrackColor = System.Drawing.Color.WhiteSmoke;
+            this.treeListView_Menu.Size = new System.Drawing.Size(484, 280);
+            this.treeListView_Menu.SmallImageList = null;
+            this.treeListView_Menu.StateImageList = null;
+            this.treeListView_Menu.TabIndex = 9;
+            this.treeListView_Menu.Text = "treeListView_Menu";
             // 
             // saveFileDialog1
             // 
-            this.saveFileDialog1.Filter = "EPUB 文件|*.epub";
+            this.saveFileDialog1.Filter = "EPUB file|*.epub";
             // 
             // BuildPath
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 435);
-            this.Controls.Add(this.treeListView1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.treeListView_Menu);
+            this.Controls.Add(this.groupBox_output);
+            this.Controls.Add(this.comboBox_spliter);
+            this.Controls.Add(this.checkBox_only);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnRename);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BuildPath";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Generate Menus";
             this.Load += new System.EventHandler(this.BuildPath_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox_output.ResumeLayout(false);
+            this.groupBox_output.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,16 +220,37 @@ namespace ePUBee
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.GroupBox groupBox1;
-        public System.Windows.Forms.TextBox textBox1;
+        private void _translate() {
+            this.Text = Resources.Resource.generatemenus;
+            this.btnConfirm.Text = Resources.Resource.confirm;
+            this.btnCancel.Text = Resources.Resource.cancel;
+            this.btnRename.Text = Resources.Resource.rename;
+            this.btnSaveas.Text = Resources.Resource.saveas;
+            this.groupBox_output.Text = Resources.Resource.output;
+
+            this.checkBox_only.Text = Resources.Resource.showmenusonly;
+
+            //this.treeListView_Menu.Text = Resources.Resource.choosethemenucontains;
+            this.treeListView_Menu.Columns[0].Text = Resources.Resource.title;
+            this.treeListView_Menu.Columns[1].Text = Resources.Resource.contains;
+            this.treeListView_Menu.Columns[2].Text = Resources.Resource.lever;
+
+            this.comboBox_spliter.Items.Clear();
+            this.comboBox_spliter.Text = "<" + Resources.Resource.choosethemenucontains + ">";
+            this.comboBox_spliter.Items.AddRange(new object[] {
+                 "<" + Resources.Resource.choosethemenucontains + ">", Resources.Resource.none, Resources.Resource.h1, Resources.Resource.h2,Resources.Resource.all});
+            
+        }
+        private System.Windows.Forms.Button btnRename;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.CheckBox checkBox_only;
+        private System.Windows.Forms.ComboBox comboBox_spliter;
+        private System.Windows.Forms.Button btnSaveas;
+        private System.Windows.Forms.GroupBox groupBox_output;
+        public System.Windows.Forms.TextBox txtPath;
         public System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private SynapticEffect.Forms.TreeListView treeListView1;
+        private SynapticEffect.Forms.TreeListView treeListView_Menu;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
 
     }

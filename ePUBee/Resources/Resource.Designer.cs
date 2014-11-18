@@ -70,11 +70,65 @@ namespace ePUBee.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Add basic 的本地化字符串。
+        /// </summary>
+        internal static string addbasic {
+            get {
+                return ResourceManager.GetString("addbasic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Add roles 的本地化字符串。
+        /// </summary>
+        internal static string addroles {
+            get {
+                return ResourceManager.GetString("addroles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 All 的本地化字符串。
+        /// </summary>
+        internal static string all {
+            get {
+                return ResourceManager.GetString("all", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Audio 的本地化字符串。
+        /// </summary>
+        internal static string audio {
+            get {
+                return ResourceManager.GetString("audio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Author 的本地化字符串。
+        /// </summary>
+        internal static string author {
+            get {
+                return ResourceManager.GetString("author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Cancel 的本地化字符串。
         /// </summary>
         internal static string cancel {
             get {
                 return ResourceManager.GetString("cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Choose the menu contains 的本地化字符串。
+        /// </summary>
+        internal static string choosethemenucontains {
+            get {
+                return ResourceManager.GetString("choosethemenucontains", resourceCulture);
             }
         }
         
@@ -88,11 +142,173 @@ namespace ePUBee.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Contact 的本地化字符串。
+        /// </summary>
+        internal static string contact {
+            get {
+                return ResourceManager.GetString("contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Contains 的本地化字符串。
+        /// </summary>
+        internal static string contains {
+            get {
+                return ResourceManager.GetString("contains", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Copy 的本地化字符串。
+        /// </summary>
+        internal static string copy {
+            get {
+                return ResourceManager.GetString("copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Delete 的本地化字符串。
+        /// </summary>
+        internal static string delete {
+            get {
+                return ResourceManager.GetString("delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Donate 的本地化字符串。
         /// </summary>
         internal static string donate {
             get {
                 return ResourceManager.GetString("donate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Edit Metas 的本地化字符串。
+        /// </summary>
+        internal static string editmetas {
+            get {
+                return ResourceManager.GetString("editmetas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 ePUBee can&apos;t save the data if you cancel. 的本地化字符串。
+        /// </summary>
+        internal static string epubeecantsavethedataifyoucancel {
+            get {
+                return ResourceManager.GetString("epubeecantsavethedataifyoucancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 file as 的本地化字符串。
+        /// </summary>
+        internal static string fileas {
+            get {
+                return ResourceManager.GetString("fileas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 File has not saved, please save the file at first! 的本地化字符串。
+        /// </summary>
+        internal static string filehasnotsavedpleasesavethefileatfirst {
+            get {
+                return ResourceManager.GetString("filehasnotsavedpleasesavethefileatfirst", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Files in the book 的本地化字符串。
+        /// </summary>
+        internal static string filesinthebook {
+            get {
+                return ResourceManager.GetString("filesinthebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Generate Menus 的本地化字符串。
+        /// </summary>
+        internal static string generatemenus {
+            get {
+                return ResourceManager.GetString("generatemenus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 h1 的本地化字符串。
+        /// </summary>
+        internal static string h1 {
+            get {
+                return ResourceManager.GetString("h1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 h2 的本地化字符串。
+        /// </summary>
+        internal static string h2 {
+            get {
+                return ResourceManager.GetString("h2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Image 的本地化字符串。
+        /// </summary>
+        internal static string image {
+            get {
+                return ResourceManager.GetString("image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 key 的本地化字符串。
+        /// </summary>
+        internal static string key {
+            get {
+                return ResourceManager.GetString("key", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Language 的本地化字符串。
+        /// </summary>
+        internal static string language {
+            get {
+                return ResourceManager.GetString("language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Lever 的本地化字符串。
+        /// </summary>
+        internal static string lever {
+            get {
+                return ResourceManager.GetString("lever", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 License 的本地化字符串。
+        /// </summary>
+        internal static string license {
+            get {
+                return ResourceManager.GetString("license", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 None 的本地化字符串。
+        /// </summary>
+        internal static string none {
+            get {
+                return ResourceManager.GetString("none", resourceCulture);
             }
         }
         
@@ -106,11 +322,47 @@ namespace ePUBee.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Open file 的本地化字符串。
+        /// </summary>
+        internal static string openfile {
+            get {
+                return ResourceManager.GetString("openfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Other File 的本地化字符串。
+        /// </summary>
+        internal static string otherfile {
+            get {
+                return ResourceManager.GetString("otherfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Others 的本地化字符串。
         /// </summary>
         internal static string others {
             get {
                 return ResourceManager.GetString("others", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Output 的本地化字符串。
+        /// </summary>
+        internal static string output {
+            get {
+                return ResourceManager.GetString("output", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 please choose a path to save the book. 的本地化字符串。
+        /// </summary>
+        internal static string pleasechooseapathtosavethebook {
+            get {
+                return ResourceManager.GetString("pleasechooseapathtosavethebook", resourceCulture);
             }
         }
         
@@ -142,11 +394,47 @@ namespace ePUBee.Resources {
         }
         
         /// <summary>
-        ///   查找类似 Quick Publish Default 的本地化字符串。
+        ///   查找类似 Quick Publish 的本地化字符串。
         /// </summary>
         internal static string quickpublish {
             get {
                 return ResourceManager.GetString("quickpublish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Rename 的本地化字符串。
+        /// </summary>
+        internal static string rename {
+            get {
+                return ResourceManager.GetString("rename", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Rename the menu 的本地化字符串。
+        /// </summary>
+        internal static string renamethemenu {
+            get {
+                return ResourceManager.GetString("renamethemenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 roles 的本地化字符串。
+        /// </summary>
+        internal static string roles {
+            get {
+                return ResourceManager.GetString("roles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Save as 的本地化字符串。
+        /// </summary>
+        internal static string saveas {
+            get {
+                return ResourceManager.GetString("saveas", resourceCulture);
             }
         }
         
@@ -156,6 +444,69 @@ namespace ePUBee.Resources {
         internal static string saveaspdf {
             get {
                 return ResourceManager.GetString("saveaspdf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 select 的本地化字符串。
+        /// </summary>
+        internal static string select {
+            get {
+                return ResourceManager.GetString("select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Select Cover 的本地化字符串。
+        /// </summary>
+        internal static string selectcover {
+            get {
+                return ResourceManager.GetString("selectcover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Show Menus Only 的本地化字符串。
+        /// </summary>
+        internal static string showmenusonly {
+            get {
+                return ResourceManager.GetString("showmenusonly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Title 的本地化字符串。
+        /// </summary>
+        internal static string title {
+            get {
+                return ResourceManager.GetString("title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 value 的本地化字符串。
+        /// </summary>
+        internal static string value {
+            get {
+                return ResourceManager.GetString("value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Video 的本地化字符串。
+        /// </summary>
+        internal static string video {
+            get {
+                return ResourceManager.GetString("video", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Website 的本地化字符串。
+        /// </summary>
+        internal static string website {
+            get {
+                return ResourceManager.GetString("website", resourceCulture);
             }
         }
     }

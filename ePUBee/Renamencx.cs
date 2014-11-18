@@ -14,6 +14,7 @@ namespace ePUBee
         public Renamencx()
         {
             InitializeComponent();
+            _translate();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -25,6 +26,11 @@ namespace ePUBee
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Renamencx_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

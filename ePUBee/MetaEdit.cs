@@ -20,6 +20,8 @@ namespace ePUBee
         public MetaEdit()
         {
             InitializeComponent();
+            _translate();
+
             Languages = Languages + "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
             Languages = Languages + "<Languages>";
             //Languages = Languages + " <Language LCID=\"1078\" Name=\"南非荷兰语\" Code=\"af\" />";
@@ -197,14 +199,14 @@ namespace ePUBee
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddRole ar = new AddRole();
+            AddBasic ar = new AddBasic();
             ar.me = this;
             ar.ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AddBasic abd = new AddBasic();
+            AddRole abd = new AddRole();
             abd.mee = this;
             abd.ShowDialog();
         }
@@ -255,7 +257,7 @@ namespace ePUBee
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("ePUBee can't save the data if you cancle.", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show(Resources.Resource.epubeecantsavethedataifyoucancel, Resources.Resource.confirm, MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 isok = false;
                 Close();
@@ -284,6 +286,7 @@ namespace ePUBee
 
         private void button5_Click(object sender, EventArgs e)
         {
+            //here has bug, if not selected.
             int selectedRowIndex = this.dataGridView1.SelectedRows[0].Index;
             if (selectedRowIndex >= 1)
             {

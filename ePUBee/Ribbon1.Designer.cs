@@ -238,7 +238,7 @@
             // 
             this.btnSaveAsPDF.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
             this.btnSaveAsPDF.Image = global::ePUBee.Properties.Resources.savepdf;
-            this.btnSaveAsPDF.Label = "另存为PDF";
+            this.btnSaveAsPDF.Label = "SaveAs PDF";
             this.btnSaveAsPDF.Name = "btnSaveAsPDF";
             this.btnSaveAsPDF.ShowImage = true;
             this.btnSaveAsPDF.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button10_Click);
@@ -246,7 +246,7 @@
             // btnAboutus
             // 
             this.btnAboutus.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnAboutus.Image = global::ePUBee.Properties.Resources.about_we;
+            this.btnAboutus.Image = global::ePUBee.Properties.Resources.about_we1;
             this.btnAboutus.Label = "About us";
             this.btnAboutus.Name = "btnAboutus";
             this.btnAboutus.ShowImage = true;
@@ -276,8 +276,9 @@
             // btnProcessing
             // 
             this.btnProcessing.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnProcessing.Image = ((System.Drawing.Image)(resources.GetObject("btnProcessing.Image")));
-            this.btnProcessing.Label = "正在生成...";
+            //this.btnProcessing.Image = ((System.Drawing.Image)(resources.GetObject("btnProcessing.Image")));
+            this.btnProcessing.Image = global::ePUBee.Properties.Resources._0504317;
+            this.btnProcessing.Label = "Processing...";
             this.btnProcessing.Name = "btnProcessing";
             this.btnProcessing.ShowImage = true;
             // 

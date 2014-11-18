@@ -63,26 +63,6 @@ namespace ePUBee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _0504312 {
-            get {
-                object obj = ResourceManager.GetObject("0504312", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _0504316 {
-            get {
-                object obj = ResourceManager.GetObject("0504316", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _0504317 {
             get {
                 object obj = ResourceManager.GetObject("_0504317", resourceCulture);
@@ -105,7 +85,17 @@ namespace ePUBee.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap about_we {
             get {
-                object obj = ResourceManager.GetObject("about we", resourceCulture);
+                object obj = ResourceManager.GetObject("about_we", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap about_we1 {
+            get {
+                object obj = ResourceManager.GetObject("about_we1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

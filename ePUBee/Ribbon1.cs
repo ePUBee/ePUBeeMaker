@@ -207,7 +207,7 @@ namespace ePUBee
             //throw new Exception("publish start, " + ePUBee.getLang.getString("publish"));
             if (doc.FullName.IndexOf(@"\") <= 0)
             {
-                MessageBox.Show("File has not saved, please save the file at first!");
+                MessageBox.Show(ePUBee.getLang.getString("filehasnotsavedpleasesavethefileatfirst"));
                 return;
             }
             string lanstr = doc.Content.LanguageIDOther.ToString();
@@ -339,7 +339,7 @@ namespace ePUBee
             timer1.Enabled = false;
 
             BuidOk bok = new BuidOk();
-            bok.linkLabel1.Text = "Open file";
+            bok.linkLabel1.Text = ePUBee.getLang.getString("openfile") ;
             bok.linkLabel1.Tag = outfile;
             bok.ShowDialog();
         }
@@ -361,7 +361,7 @@ namespace ePUBee
 
             if (doc.FullName.IndexOf(@"\") <= 0)
             {
-                MessageBox.Show("File has not saved, please save the file at first!");
+                MessageBox.Show(ePUBee.getLang.getString("filehasnotsavedpleasesavethefileatfirst"));
                 groupProcessing.Visible = false;
                 btnPublish.Enabled = true;
                 timer1.Enabled = false;
@@ -491,7 +491,7 @@ namespace ePUBee
             {
                 mEpub.WriteNcx();
                 mEpub.WriteOpfContent();
-                mEpub.Buildfile(blp.textBox1.Text);
+                mEpub.Buildfile(blp.txtPath.Text);
             }
             groupProcessing.Visible = false;
             btnPublish.Enabled = true;
@@ -606,8 +606,8 @@ namespace ePUBee
 
         private void button7_Click(object sender, RibbonControlEventArgs e)
         {
-            about abt = new about();
-            abt.ShowDialog();
+            //about abt = new about();
+            //abt.ShowDialog();
         }
 
         private void button11_Click(object sender, RibbonControlEventArgs e)

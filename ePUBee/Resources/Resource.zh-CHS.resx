@@ -120,17 +120,32 @@
   <data name="aboutus" xml:space="preserve">
     <value>关于我们</value>
   </data>
+  <data name="author" xml:space="preserve">
+    <value>作者</value>
+  </data>
   <data name="cancel" xml:space="preserve">
     <value>取消</value>
   </data>
   <data name="confirm" xml:space="preserve">
     <value>确定</value>
   </data>
+  <data name="contact" xml:space="preserve">
+    <value>联系</value>
+  </data>
   <data name="donate" xml:space="preserve">
     <value>捐款</value>
   </data>
+  <data name="filehasnotsavedpleasesavethefileatfirst" xml:space="preserve">
+    <value>文件没有保存，请先保存文件</value>
+  </data>
+  <data name="license" xml:space="preserve">
+    <value>授权</value>
+  </data>
   <data name="ok" xml:space="preserve">
     <value>确定</value>
+  </data>
+  <data name="openfile" xml:space="preserve">
+    <value>打开文件</value>
   </data>
   <data name="others" xml:space="preserve">
     <value>其它</value>
@@ -149,5 +164,120 @@
   </data>
   <data name="saveaspdf" xml:space="preserve">
     <value>另存为PDF</value>
+  </data>
+  <data name="website" xml:space="preserve">
+    <value>网站</value>
+  </data>
+  <data name="addbasic" xml:space="preserve">
+    <value>添加基本</value>
+  </data>
+  <data name="addroles" xml:space="preserve">
+    <value>添加角色</value>
+  </data>
+  <data name="all" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="audio" xml:space="preserve">
+    <value>声音</value>
+  </data>
+  <data name="choosethemenucontains" xml:space="preserve">
+    <value>选择包含的目录</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="contains" xml:space="preserve">
+    <value>包含</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="editmetas" xml:space="preserve">
+    <value>编辑元数据</value>
+  </data>
+  <data name="epubeecantsavethedataifyoucancel" xml:space="preserve">
+    <value>ePUBee不会为你保存数据，确认取消。</value>
+  </data>
+  <data name="fileas" xml:space="preserve">
+    <value>文件为</value>
+  </data>
+  <data name="filesinthebook" xml:space="preserve">
+    <value>书中包含的文件</value>
+    <comment>SaveHtmlForm</comment>
+  </data>
+  <data name="generatemenus" xml:space="preserve">
+    <value>目录生成</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="h1" xml:space="preserve">
+    <value>大标题&lt;h1&gt;</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="h2" xml:space="preserve">
+    <value>副标题&lt;h2&gt;</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>图像</value>
+  </data>
+  <data name="key" xml:space="preserve">
+    <value>键</value>
+  </data>
+  <data name="language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="lever" xml:space="preserve">
+    <value>层级</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="none" xml:space="preserve">
+    <value>无</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="otherfile" xml:space="preserve">
+    <value>其它文件</value>
+    <comment>SaveHtmlForm</comment>
+  </data>
+  <data name="output" xml:space="preserve">
+    <value>输出</value>
+  </data>
+  <data name="pleasechooseapathtosavethebook" xml:space="preserve">
+    <value>请选择路径保存电子书.</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="rename" xml:space="preserve">
+    <value>重命名</value>
+  </data>
+  <data name="renamethemenu" xml:space="preserve">
+    <value>目录重命名</value>
+    <comment>Rename</comment>
+  </data>
+  <data name="roles" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="saveas" xml:space="preserve">
+    <value>保存为</value>
+  </data>
+  <data name="select" xml:space="preserve">
+    <value>选择</value>
+    <comment>SaveHtmlForm</comment>
+  </data>
+  <data name="selectcover" xml:space="preserve">
+    <value>选择封面</value>
+  </data>
+  <data name="showmenusonly" xml:space="preserve">
+    <value>仅生成目录</value>
+    <comment>BuildPath</comment>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>标题</value>
+  </data>
+  <data name="value" xml:space="preserve">
+    <value>值</value>
+  </data>
+  <data name="video" xml:space="preserve">
+    <value>视频</value>
   </data>
 </root>

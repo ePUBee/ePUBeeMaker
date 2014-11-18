@@ -14,8 +14,9 @@ namespace ePUBee
         public AboutWe()
         {
             InitializeComponent();
-            this.Text = ePUBee.getLang.getString("aboutus");
-            this.lblsoft.Text = "ePUBee Maker v" + System.Configuration.ConfigurationSettings.AppSettings["version"].ToString();
+            _translate();
+            //this.Text = ePUBee.getLang.getString("aboutus");
+            //this.lblsoft.Text = "ePUBee Maker v" + System.Configuration.ConfigurationSettings.AppSettings["version"].ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -16,6 +16,7 @@ namespace ePUBee
         public SaveHtmlForm()
         {
             InitializeComponent();
+            _transloate();
         }
 
         public Boolean isok = false;
@@ -26,11 +27,11 @@ namespace ePUBee
         {
             try
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                if (openFileDialog_browseCover.ShowDialog() == DialogResult.OK)
                 {
-                    if (openFileDialog1.FileName.Length >= 1)
+                    if (openFileDialog_browseCover.FileName.Length >= 1)
                     {
-                        textBox1.Text = openFileDialog1.FileName;
+                        textBox1.Text = openFileDialog_browseCover.FileName;
                         pictureBox1.Image = Image.FromFile(textBox1.Text);
                         SelectFile = textBox1.Text;
                     }
@@ -72,7 +73,7 @@ namespace ePUBee
                     foreach (Match match in matches)
                     {
                         imgurl = match.Groups["imgUrl"].Value;
-                        listView1.Items.Add("img", imgurl.Substring(imgurl.LastIndexOf(@"/") + 1), ImaPath +"\\Images\\"+ imgurl.Substring(imgurl.LastIndexOf(@"/") + 1));
+                        listView_Sources.Items.Add("img", imgurl.Substring(imgurl.LastIndexOf(@"/") + 1), ImaPath +"\\Images\\"+ imgurl.Substring(imgurl.LastIndexOf(@"/") + 1));
                     }
                     sr.Close();
                 }
@@ -85,7 +86,7 @@ namespace ePUBee
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("ePUBee can't save the data if you cancle.", "Confirm", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            if (MessageBox.Show(Resources.Resource.epubeecantsavethedataifyoucancel, Resources.Resource.confirm, MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 isok = false;
                 Close();
@@ -101,8 +102,8 @@ namespace ePUBee
         {
             try
             {
-                pictureBox1.Load(listView1.SelectedItems[0].ImageKey);
-                SelectFile = listView1.SelectedItems[0].Text;
+                pictureBox1.Load(listView_Sources.SelectedItems[0].ImageKey);
+                SelectFile = listView_Sources.SelectedItems[0].Text;
             }
             catch (Exception)
             {
