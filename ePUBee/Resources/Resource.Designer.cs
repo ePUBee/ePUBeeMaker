@@ -133,6 +133,15 @@ namespace ePUBee.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Close 的本地化字符串。
+        /// </summary>
+        internal static string close {
+            get {
+                return ResourceManager.GetString("close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Confirm 的本地化字符串。
         /// </summary>
         internal static string confirm {
@@ -201,6 +210,15 @@ namespace ePUBee.Resources {
         internal static string epubeecantsavethedataifyoucancel {
             get {
                 return ResourceManager.GetString("epubeecantsavethedataifyoucancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 ePUB has published 的本地化字符串。
+        /// </summary>
+        internal static string epubhaspublished {
+            get {
+                return ResourceManager.GetString("epubhaspublished", resourceCulture);
             }
         }
         
@@ -327,6 +345,15 @@ namespace ePUBee.Resources {
         internal static string openfile {
             get {
                 return ResourceManager.GetString("openfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Open Folder 的本地化字符串。
+        /// </summary>
+        internal static string openfolder {
+            get {
+                return ResourceManager.GetString("openfolder", resourceCulture);
             }
         }
         

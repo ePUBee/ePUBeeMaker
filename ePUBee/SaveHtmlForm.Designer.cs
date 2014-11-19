@@ -163,7 +163,7 @@
         }
 
         #endregion
-        private void _transloate() {
+        private void _translate() {
             this.Text = Resources.Resource.selectcover;
             this.lblselect.Text = Resources.Resource.select;
             this.btnOtherFile.Text = Resources.Resource.otherfile;

@@ -265,17 +265,17 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="AboutWe.cs">
+    <Compile Include="Aboutus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutWe.Designer.cs">
-      <DependentUpon>AboutWe.cs</DependentUpon>
+    <Compile Include="Aboutus.Designer.cs">
+      <DependentUpon>Aboutus.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddRoles.cs">
+    <Compile Include="AddRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddRoles.Designer.cs">
-      <DependentUpon>AddRoles.cs</DependentUpon>
+    <Compile Include="AddRole.Designer.cs">
+      <DependentUpon>AddRole.cs</DependentUpon>
     </Compile>
     <Compile Include="AddBasic.cs">
       <SubType>Form</SubType>
@@ -283,11 +283,11 @@
     <Compile Include="AddBasic.Designer.cs">
       <DependentUpon>AddBasic.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuidOk.cs">
+    <Compile Include="BuildOk.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BuidOk.Designer.cs">
-      <DependentUpon>BuidOk.cs</DependentUpon>
+    <Compile Include="BuildOk.Designer.cs">
+      <DependentUpon>BuildOk.cs</DependentUpon>
     </Compile>
     <Compile Include="BuildPath.cs">
       <SubType>Form</SubType>
@@ -342,19 +342,19 @@
       <DependentUpon>UserTaskPane.cs</DependentUpon>
     </Compile>
     <Compile Include="XHtmlTools.cs" />
-    <EmbeddedResource Include="AboutWe.resx">
-      <DependentUpon>AboutWe.cs</DependentUpon>
+    <EmbeddedResource Include="Aboutus.resx">
+      <DependentUpon>Aboutus.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddRoles.resx">
-      <DependentUpon>AddRoles.cs</DependentUpon>
+    <EmbeddedResource Include="AddRole.resx">
+      <DependentUpon>AddRole.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="AddBasic.resx">
       <DependentUpon>AddBasic.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="BuidOk.resx">
-      <DependentUpon>BuidOk.cs</DependentUpon>
+    <EmbeddedResource Include="BuildOk.resx">
+      <DependentUpon>BuildOk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BuildPath.resx">
       <DependentUpon>BuildPath.cs</DependentUpon>

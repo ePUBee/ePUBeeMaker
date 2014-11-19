@@ -280,4 +280,15 @@
   <data name="video" xml:space="preserve">
     <value>视频</value>
   </data>
+  <data name="close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="epubhaspublished" xml:space="preserve">
+    <value>ePUB已经发布</value>
+    <comment>BuildOk</comment>
+  </data>
+  <data name="openfolder" xml:space="preserve">
+    <value>打开目录</value>
+    <comment>BuildOk</comment>
+  </data>
 </root>

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ePUBee
 {
-    public partial class AboutWe : Form
+    public partial class Aboutus : Form
     {
-        public AboutWe()
+        public Aboutus()
         {
             InitializeComponent();
             _translate();

@@ -338,7 +338,7 @@ namespace ePUBee
             btnQuickPublish.Enabled = true;
             timer1.Enabled = false;
 
-            BuidOk bok = new BuidOk();
+            BuildOk bok = new BuildOk();
             bok.linkLabel1.Text = ePUBee.getLang.getString("openfile") ;
             bok.linkLabel1.Tag = outfile;
             bok.ShowDialog();
@@ -625,7 +625,7 @@ namespace ePUBee
 
         private void button12_Click(object sender, RibbonControlEventArgs e)
         {
-            AboutWe abw = new AboutWe();
+            Aboutus abw = new Aboutus();
             abw.ShowDialog();
         }
 

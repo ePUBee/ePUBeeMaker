@@ -16,7 +16,7 @@ namespace ePUBee
         public SaveHtmlForm()
         {
             InitializeComponent();
-            _transloate();
+            _translate();
         }
 
         public Boolean isok = false;

@@ -1,6 +1,6 @@
 ﻿namespace ePUBee
 {
-    partial class AboutWe
+    partial class Aboutus
     {
         /// <summary>
         /// Required designer variable.
@@ -84,7 +84,7 @@
             // 
             // lblauthor
             // 
-            this.lblauthor.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            //this.lblauthor.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblauthor.Location = new System.Drawing.Point(80, 93);
             this.lblauthor.Name = "lblauthor";
             this.lblauthor.Size = new System.Drawing.Size(72, 14);

@@ -59,7 +59,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label1.Location = new System.Drawing.Point(270, 33);
             this.label1.Name = "label1";

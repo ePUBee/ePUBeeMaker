@@ -9,11 +9,12 @@ using System.Windows.Forms;
 
 namespace ePUBee
 {
-    public partial class BuidOk : Form
+    public partial class BuildOk : Form
     {
-        public BuidOk()
+        public BuildOk()
         {
             InitializeComponent();
+            _translate();
         }
 
         private void button2_Click(object sender, EventArgs e)
