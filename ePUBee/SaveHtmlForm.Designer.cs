@@ -61,7 +61,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(556, 624);
+            this.btnCancel.Location = new System.Drawing.Point(573, 495);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 5;
@@ -71,7 +71,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(445, 624);
+            this.btnOK.Location = new System.Drawing.Point(462, 495);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 4;
@@ -95,7 +95,7 @@
             "Audio"});
             this.listBox_Menu.Location = new System.Drawing.Point(13, 12);
             this.listBox_Menu.Name = "listBox_Menu";
-            this.listBox_Menu.Size = new System.Drawing.Size(120, 566);
+            this.listBox_Menu.Size = new System.Drawing.Size(120, 458);
             this.listBox_Menu.TabIndex = 8;
             this.listBox_Menu.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -115,7 +115,7 @@
             this.columnHeader1});
             this.listView_Sources.Location = new System.Drawing.Point(139, 52);
             this.listView_Sources.Name = "listView_Sources";
-            this.listView_Sources.Size = new System.Drawing.Size(121, 528);
+            this.listView_Sources.Size = new System.Drawing.Size(121, 420);
             this.listView_Sources.TabIndex = 11;
             this.listView_Sources.UseCompatibleStateImageBehavior = false;
             this.listView_Sources.View = System.Windows.Forms.View.Details;
@@ -132,7 +132,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(272, 52);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(399, 528);
+            this.pictureBox1.Size = new System.Drawing.Size(399, 420);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 659);
+            this.ClientSize = new System.Drawing.Size(683, 539);
             this.Controls.Add(this.listView_Sources);
             this.Controls.Add(this.lblselect);
             this.Controls.Add(this.pictureBox1);

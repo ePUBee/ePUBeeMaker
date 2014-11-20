@@ -88,6 +88,7 @@ namespace ePUBee
             this.checkBox_only.TabIndex = 3;
             this.checkBox_only.Text = "Show menus only";
             this.checkBox_only.UseVisualStyleBackColor = true;
+            this.checkBox_only.Visible = false;
             // 
             // comboBox_spliter
             // 
@@ -103,6 +104,7 @@ namespace ePUBee
             this.comboBox_spliter.Size = new System.Drawing.Size(235, 20);
             this.comboBox_spliter.TabIndex = 5;
             this.comboBox_spliter.Text = "<Choose the menu contains>";
+            this.comboBox_spliter.Visible = false;
             // 
             // btnSaveas
             // 
