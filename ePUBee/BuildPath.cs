@@ -153,27 +153,26 @@ namespace ePUBee
 
             XmlNodeList xnList = xmldoc.SelectNodes("//navPoint");
 
-            //have errors here
-            //if (treeListView1.SelectedNodes.Count == 0 || true)
-            //{//
-                foreach (XmlNode n in xnList)
+            if (treeListView_Menu.getcurNode == null)
+            {
+                MessageBox.Show("Please select an item.");
+                return;
+            }
+
+            foreach (XmlNode n in xnList)
+            {
+                if (n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml == treeListView_Menu.getcurNode.Text)
                 {
-                    if (n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml == treeListView_Menu.SelectedNodes[0].Text)
+                    Renamencx rn = new Renamencx();
+                    rn.txtContents.Text = treeListView_Menu.getcurNode.Text;
+                    if (rn.ShowDialog() == DialogResult.OK)
                     {
-                        Renamencx rn = new Renamencx();
-                        rn.txtContents.Text = treeListView_Menu.SelectedNodes[0].Text;
-                        if (rn.ShowDialog() == DialogResult.OK)
-                        {
-                            n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml = rn.txtContents.Text;
-                            treeListView_Menu.SelectedNodes[0].Text = rn.txtContents.Text;
-                        }
-                        return;
+                        n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml = rn.txtContents.Text;
+                        treeListView_Menu.getcurNode.Text = rn.txtContents.Text;
                     }
+                    return;
                 }
-            //}
-            //else {
-            //    MessageBox.Show("Please select an item.");
-            //}
+            }
         }
     }
 }

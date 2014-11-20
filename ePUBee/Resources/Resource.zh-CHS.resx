@@ -291,4 +291,14 @@
     <value>打开目录</value>
     <comment>BuildOk</comment>
   </data>
+  <data name="about" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="maker" xml:space="preserve">
+    <value>智多星</value>
+  </data>
+  <data name="pleaseselectanitem" xml:space="preserve">
+    <value>请选择项.</value>
+    <comment>BuildPath</comment>
+  </data>
 </root>

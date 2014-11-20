@@ -11,6 +11,8 @@
             : base(Globals.Factory.GetRibbonFactory())
         {
             InitializeComponent();
+            tab1.Label = "ePUBee " + Resources.Resource.maker;
+           
         }
 
         /// <summary> 
@@ -35,7 +37,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ribbon1));
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
@@ -43,26 +44,26 @@
             this.tab1 = this.Factory.CreateRibbonTab();
             this.groupInsert = this.Factory.CreateRibbonGroup();
             this.box2 = this.Factory.CreateRibbonBox();
+            this.groupAbout = this.Factory.CreateRibbonGroup();
+            this.box3 = this.Factory.CreateRibbonBox();
+            this.groupAboutus = this.Factory.CreateRibbonGroup();
+            this.box4 = this.Factory.CreateRibbonBox();
+            this.groupPubhish = this.Factory.CreateRibbonGroup();
+            this.box1 = this.Factory.CreateRibbonBox();
+            this.groupOthers = this.Factory.CreateRibbonGroup();
+            this.groupProcessing = this.Factory.CreateRibbonGroup();
+            this.box5 = this.Factory.CreateRibbonBox();
             this.button3 = this.Factory.CreateRibbonButton();
             this.button4 = this.Factory.CreateRibbonButton();
             this.button5 = this.Factory.CreateRibbonButton();
-            this.groupAbout = this.Factory.CreateRibbonGroup();
-            this.box3 = this.Factory.CreateRibbonBox();
             this.button6 = this.Factory.CreateRibbonButton();
             this.button7 = this.Factory.CreateRibbonButton();
-            this.groupAboutus = this.Factory.CreateRibbonGroup();
-            this.box4 = this.Factory.CreateRibbonBox();
             this.button9 = this.Factory.CreateRibbonButton();
-            this.groupPubhish = this.Factory.CreateRibbonGroup();
-            this.box1 = this.Factory.CreateRibbonBox();
             this.btnQuickPublish = this.Factory.CreateRibbonButton();
             this.btnPublish = this.Factory.CreateRibbonButton();
-            this.groupOthers = this.Factory.CreateRibbonGroup();
             this.btnSaveAsPDF = this.Factory.CreateRibbonButton();
-            this.btnAboutus = this.Factory.CreateRibbonButton();
+            this.btnAbout = this.Factory.CreateRibbonButton();
             this.btnDonate = this.Factory.CreateRibbonButton();
-            this.groupProcessing = this.Factory.CreateRibbonGroup();
-            this.box5 = this.Factory.CreateRibbonBox();
             this.btnProcessing = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.groupInsert.SuspendLayout();
@@ -117,6 +118,63 @@
             this.box2.Items.Add(this.button5);
             this.box2.Name = "box2";
             // 
+            // groupAbout
+            // 
+            this.groupAbout.Items.Add(this.box3);
+            this.groupAbout.Label = "About";
+            this.groupAbout.Name = "groupAbout";
+            this.groupAbout.Visible = false;
+            // 
+            // box3
+            // 
+            this.box3.Items.Add(this.button6);
+            this.box3.Items.Add(this.button7);
+            this.box3.Name = "box3";
+            // 
+            // groupAboutus
+            // 
+            this.groupAboutus.Items.Add(this.box4);
+            this.groupAboutus.Label = "About us";
+            this.groupAboutus.Name = "groupAboutus";
+            this.groupAboutus.Visible = false;
+            // 
+            // box4
+            // 
+            this.box4.Items.Add(this.button9);
+            this.box4.Name = "box4";
+            // 
+            // groupPubhish
+            // 
+            this.groupPubhish.Items.Add(this.box1);
+            this.groupPubhish.Label = "Publish";
+            this.groupPubhish.Name = "groupPubhish";
+            // 
+            // box1
+            // 
+            this.box1.Items.Add(this.btnQuickPublish);
+            this.box1.Items.Add(this.btnPublish);
+            this.box1.Name = "box1";
+            // 
+            // groupOthers
+            // 
+            this.groupOthers.Items.Add(this.btnSaveAsPDF);
+            this.groupOthers.Items.Add(this.btnAbout);
+            this.groupOthers.Items.Add(this.btnDonate);
+            this.groupOthers.Label = "Others";
+            this.groupOthers.Name = "groupOthers";
+            // 
+            // groupProcessing
+            // 
+            this.groupProcessing.Items.Add(this.box5);
+            this.groupProcessing.Label = "Publishing";
+            this.groupProcessing.Name = "groupProcessing";
+            this.groupProcessing.Visible = false;
+            // 
+            // box5
+            // 
+            this.box5.Items.Add(this.btnProcessing);
+            this.box5.Name = "box5";
+            // 
             // button3
             // 
             this.button3.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -144,19 +202,6 @@
             this.button5.ShowImage = true;
             this.button5.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button5_Click);
             // 
-            // groupAbout
-            // 
-            this.groupAbout.Items.Add(this.box3);
-            this.groupAbout.Label = "About";
-            this.groupAbout.Name = "groupAbout";
-            this.groupAbout.Visible = false;
-            // 
-            // box3
-            // 
-            this.box3.Items.Add(this.button6);
-            this.box3.Items.Add(this.button7);
-            this.box3.Name = "box3";
-            // 
             // button6
             // 
             this.button6.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -175,18 +220,6 @@
             this.button7.ShowImage = true;
             this.button7.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button7_Click);
             // 
-            // groupAboutus
-            // 
-            this.groupAboutus.Items.Add(this.box4);
-            this.groupAboutus.Label = "About us";
-            this.groupAboutus.Name = "groupAboutus";
-            this.groupAboutus.Visible = false;
-            // 
-            // box4
-            // 
-            this.box4.Items.Add(this.button9);
-            this.box4.Name = "box4";
-            // 
             // button9
             // 
             this.button9.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
@@ -195,18 +228,6 @@
             this.button9.Name = "button9";
             this.button9.ShowImage = true;
             this.button9.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button9_Click);
-            // 
-            // groupPubhish
-            // 
-            this.groupPubhish.Items.Add(this.box1);
-            this.groupPubhish.Label = "Publish";
-            this.groupPubhish.Name = "groupPubhish";
-            // 
-            // box1
-            // 
-            this.box1.Items.Add(this.btnQuickPublish);
-            this.box1.Items.Add(this.btnPublish);
-            this.box1.Name = "box1";
             // 
             // btnQuickPublish
             // 
@@ -226,57 +247,36 @@
             this.btnPublish.ShowImage = true;
             this.btnPublish.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button2_Click);
             // 
-            // groupOthers
-            // 
-            this.groupOthers.Items.Add(this.btnSaveAsPDF);
-            this.groupOthers.Items.Add(this.btnAboutus);
-            this.groupOthers.Items.Add(this.btnDonate);
-            this.groupOthers.Label = "Others";
-            this.groupOthers.Name = "groupOthers";
-            // 
             // btnSaveAsPDF
             // 
             this.btnSaveAsPDF.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnSaveAsPDF.Image = global::ePUBee.Properties.Resources.savepdf;
+            this.btnSaveAsPDF.Image = global::ePUBee.Properties.Resources.pdficon;
             this.btnSaveAsPDF.Label = "SaveAs PDF";
             this.btnSaveAsPDF.Name = "btnSaveAsPDF";
             this.btnSaveAsPDF.ShowImage = true;
             this.btnSaveAsPDF.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button10_Click);
             // 
-            // btnAboutus
+            // btnAbout
             // 
-            this.btnAboutus.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnAboutus.Image = global::ePUBee.Properties.Resources.about_we1;
-            this.btnAboutus.Label = "About us";
-            this.btnAboutus.Name = "btnAboutus";
-            this.btnAboutus.ShowImage = true;
-            this.btnAboutus.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button12_Click);
+            this.btnAbout.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.btnAbout.Image = global::ePUBee.Properties.Resources.about;
+            this.btnAbout.Label = "About";
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.ShowImage = true;
+            this.btnAbout.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button12_Click);
             // 
             // btnDonate
             // 
             this.btnDonate.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            this.btnDonate.Image = global::ePUBee.Properties.Resources.juankuan;
+            this.btnDonate.Image = global::ePUBee.Properties.Resources.donate;
             this.btnDonate.Label = "Donate";
             this.btnDonate.Name = "btnDonate";
             this.btnDonate.ShowImage = true;
             this.btnDonate.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.button11_Click);
             // 
-            // groupProcessing
-            // 
-            this.groupProcessing.Items.Add(this.box5);
-            this.groupProcessing.Label = "Publishing";
-            this.groupProcessing.Name = "groupProcessing";
-            this.groupProcessing.Visible = false;
-            // 
-            // box5
-            // 
-            this.box5.Items.Add(this.btnProcessing);
-            this.box5.Name = "box5";
-            // 
             // btnProcessing
             // 
             this.btnProcessing.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
-            //this.btnProcessing.Image = ((System.Drawing.Image)(resources.GetObject("btnProcessing.Image")));
             this.btnProcessing.Image = global::ePUBee.Properties.Resources._0504317;
             this.btnProcessing.Label = "Processing...";
             this.btnProcessing.Name = "btnProcessing";
@@ -341,7 +341,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup groupOthers;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnSaveAsPDF;
-        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAboutus;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton btnAbout;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnDonate;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnQuickPublish;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton btnPublish;

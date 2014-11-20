@@ -103,6 +103,16 @@ namespace ePUBee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap donate {
+            get {
+                object obj = ResourceManager.GetObject("donate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Download1 {
             get {
                 object obj = ResourceManager.GetObject("Download1", resourceCulture);
@@ -153,6 +163,16 @@ namespace ePUBee.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pdficon {
+            get {
+                object obj = ResourceManager.GetObject("pdficon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap post {
             get {
                 object obj = ResourceManager.GetObject("post", resourceCulture);
@@ -176,16 +196,6 @@ namespace ePUBee.Properties {
         internal static System.Drawing.Bitmap qpost {
             get {
                 object obj = ResourceManager.GetObject("qpost", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap savepdf {
-            get {
-                object obj = ResourceManager.GetObject("savepdf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

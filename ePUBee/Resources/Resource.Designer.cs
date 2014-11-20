@@ -61,6 +61,15 @@ namespace ePUBee.Resources {
         }
         
         /// <summary>
+        ///   查找类似 About 的本地化字符串。
+        /// </summary>
+        internal static string about {
+            get {
+                return ResourceManager.GetString("about", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Aboutus 的本地化字符串。
         /// </summary>
         internal static string aboutus {
@@ -322,6 +331,15 @@ namespace ePUBee.Resources {
         }
         
         /// <summary>
+        ///   查找类似 Maker 的本地化字符串。
+        /// </summary>
+        internal static string maker {
+            get {
+                return ResourceManager.GetString("maker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 None 的本地化字符串。
         /// </summary>
         internal static string none {
@@ -390,6 +408,15 @@ namespace ePUBee.Resources {
         internal static string pleasechooseapathtosavethebook {
             get {
                 return ResourceManager.GetString("pleasechooseapathtosavethebook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Please select an item. 的本地化字符串。
+        /// </summary>
+        internal static string pleaseselectanitem {
+            get {
+                return ResourceManager.GetString("pleaseselectanitem", resourceCulture);
             }
         }
         

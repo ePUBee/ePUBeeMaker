@@ -34,11 +34,9 @@ namespace ePUBee
             btnQuickPublish.Label = ePUBee.getLang.getString("quickpublish");
             btnPublish.Label = ePUBee.getLang.getString("publish");
             btnSaveAsPDF.Label = ePUBee.getLang.getString("saveaspdf");
-            btnAboutus.Label = ePUBee.getLang.getString("aboutus");
+            btnAbout.Label = Resources.Resource.about;
             btnDonate.Label = ePUBee.getLang.getString("donate");
             btnProcessing.Label = ePUBee.getLang.getString("processing");
-
-            //btnQuickPublish.Label = Resources.Resource.ResourceManager.GetString("quickpublish");
 
 
             groupPubhish.Label = ePUBee.getLang.getString("publish");
@@ -86,16 +84,19 @@ namespace ePUBee
             }
         }
 
-        public bool foreachnode(XmlNode headNode, XmlElement innode, int d)
+        public bool foreachnode(XmlNode headNode, XmlElement innode, string pstr)
         {
             for (int i = headNode.ChildNodes.Count - 1; i >= 0; i--)
             {
                 XmlElement xe = (XmlElement)headNode.ChildNodes[i];
-                if (xe.ChildNodes.Count > 1) if (foreachnode(xe, innode, d)) return true;
-                if (xe.Prefix.IndexOf(d.ToString()) >= 0)
+                if (xe.ChildNodes.Count > 1) if (foreachnode(xe, innode, pstr)) return true;
+                if (xe.SelectSingleNode("navLabel") != null)
                 {
-                    xe.AppendChild(innode);
-                    return true;
+                    if (pstr.IndexOf(xe.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml) >= 0)
+                    {
+                        xe.AppendChild(innode);
+                        return true;
+                    }
                 }
             }
             return false;
@@ -117,7 +118,7 @@ namespace ePUBee
         private void importoutxml(Word.Document DOC, string HtmlFileName, EPUB mEpub)
         {
 
-            int p = 1;
+            int p = 0;
 
             XmlDocument xml = mEpub.getncxml();
             XmlNode navMapNode = xml.SelectSingleNode("ncx/navMap");
@@ -125,17 +126,46 @@ namespace ePUBee
 
             try
             {
+                object x = DOC.GetCrossReferenceItems(Microsoft.Office.Interop.Word.WdReferenceType.wdRefTypeHeading);
+                Array strs = (Array)x;
+                int cc = 0;
+                string pstr;
                 foreach (Word.Paragraph Paragr in DOC.Paragraphs)
                 {
                     int level = (int)Paragr.OutlineLevel;
-     
+                    cc = 0;
+                    pstr = "";
+
                     if (level < 9)
                     {
+                        p++;
                         try
                         {
                             Paragr.ID = "_ncx_toc_" + p.ToString();
                             string tstr = ReplaceLowOrderASCIICharacters(Paragr.Range.Text.Trim());
                             if (p == 1) xml.SelectSingleNode("ncx/docTitle/text").InnerXml = tstr;
+
+                            for (int i = 0; i < strs.Length; i++)
+                            {
+                                string hreadingstr = strs.GetValue(i + 1).ToString();
+                                if (hreadingstr.IndexOf(tstr) >= 0)
+                                {
+                                    tstr = hreadingstr;
+                                    cc = hreadingstr.Length - hreadingstr.TrimStart().Length;
+
+                                    for (int pi = i; pi >= 0; pi--)
+                                    {
+                                        string phreadingstr = strs.GetValue(pi + 1).ToString();
+                                        int pc = phreadingstr.Length - phreadingstr.TrimStart().Length;
+                                        if (pc < cc)
+                                        {
+                                            pstr = phreadingstr;
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
 
                             XmlElement navPointEl = xml.CreateElement("navPoint");
                             navPointEl.Prefix = Paragr.Range.ParagraphStyle.NameLocal.ToString();
@@ -143,40 +173,27 @@ namespace ePUBee
                             navPointEl.SetAttribute("playOrder", p.ToString());
 
                             XmlElement subPoint = xml.CreateElement("navLabel");
-                            subPoint.InnerXml = "<text>" + tstr + "</text>";
+                            subPoint.InnerXml = "<text>" + tstr.Trim() + "</text>";
 
                             XmlElement ConPoint = xml.CreateElement("content");
                             ConPoint.SetAttribute("src", "Text/" + mEpub.chapterName + ".xhtml#_ncx_toc_" + p.ToString());
 
                             navPointEl.AppendChild(subPoint);
                             navPointEl.AppendChild(ConPoint);
-                            p++;
 
-                            if (Paragr.Range.XMLParentNode == null)
+                            if (pstr.Length > 0)
                             {
-                                navMapNode.AppendChild(navPointEl);
-                            }
-
-                            string s = level.ToString();
-                            double num = 0;
-
-                            if (double.TryParse(s, out num))
-                            {
-                                if (num <= 1)
+                                for (int i = navMapNode.ChildNodes.Count - 1; i >= 0; i--)
                                 {
-                                    navMapNode.AppendChild(navPointEl);
-                                }
-                                else
-                                {
-                                    num = num - 1;
-                                    int d = (int)num;
-                                    for (int i = navMapNode.ChildNodes.Count - 1; i >= 0; i--)
+                                    XmlElement xe = (XmlElement)navMapNode.ChildNodes[i];
+                                    if (pstr.IndexOf(xe.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml) >= 0)
+                                        xe.AppendChild(navPointEl);
+                                    else
                                     {
-                                        XmlElement xe = (XmlElement)navMapNode.ChildNodes[i];
-                                        if (xe.Prefix.IndexOf(d.ToString()) >= 0)
-                                            xe.AppendChild(navPointEl);
-                                        else
-                                            foreachnode(navMapNode.ChildNodes[i], navPointEl, d);
+                                        if (xe.ChildNodes.Count > 1)
+                                        {
+                                            foreachnode(xe, navPointEl, pstr);
+                                        }
                                     }
                                 }
                             }
@@ -193,7 +210,7 @@ namespace ePUBee
                     }
                 }
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 return;
             }
@@ -346,6 +363,7 @@ namespace ePUBee
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
+            //MessageBox.Show(System.Globalization.CultureInfo.CurrentCulture.Name);
             Thread t = new Thread(importxml);
             t.ApartmentState = System.Threading.ApartmentState.STA;
             t.Start(Globals.ThisAddIn.Application.ActiveDocument);
@@ -574,33 +592,33 @@ namespace ePUBee
         {
 
             button4.Enabled = false;
-            insertflash inflash = new insertflash();
+            //insertflash inflash = new insertflash();
 
-            if (inflash.ShowDialog() == DialogResult.OK)
-            {
-                Word.Application word = Globals.ThisAddIn.Application;
-                Word.Document doc = word.ActiveDocument;
-                string htmlstr = "<html>\r\n" +
-                      " <head></head>\r\n" +
-                      " <body>\r\n" +
-                      "	<object classid=\"clsid:D27CDB6E-AE6D-11CF-96B8-444553540000\" id=\"obj1\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\" border=\"0\" width=\"" + inflash.textBox3.Text + "\" height=\"" + inflash.textBox2.Text + "\">" +
-                      "  <param name=\"movie\" value=\"" + inflash.textBox1.Text + "\">" +
-                      "  <param name=\"quality\" value=\"High\">" +
-                      "  <embed src=\"" + inflash.textBox1.Text + "\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" name=\"obj1\" width=\"" + inflash.textBox3.Text + "\" height=\"" + inflash.textBox2.Text + "\" quality=\"High\"></object>" +
-                      "</body>" +
-                      "<html>";
+            //if (inflash.ShowDialog() == DialogResult.OK)
+            //{
+            //    Word.Application word = Globals.ThisAddIn.Application;
+            //    Word.Document doc = word.ActiveDocument;
+            //    string htmlstr = "<html>\r\n" +
+            //          " <head></head>\r\n" +
+            //          " <body>\r\n" +
+            //          "	<object classid=\"clsid:D27CDB6E-AE6D-11CF-96B8-444553540000\" id=\"obj1\" codebase=\"http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0\" border=\"0\" width=\"" + inflash.textBox3.Text + "\" height=\"" + inflash.textBox2.Text + "\">" +
+            //          "  <param name=\"movie\" value=\"" + inflash.textBox1.Text + "\">" +
+            //          "  <param name=\"quality\" value=\"High\">" +
+            //          "  <embed src=\"" + inflash.textBox1.Text + "\" pluginspage=\"http://www.macromedia.com/go/getflashplayer\" type=\"application/x-shockwave-flash\" name=\"obj1\" width=\"" + inflash.textBox3.Text + "\" height=\"" + inflash.textBox2.Text + "\" quality=\"High\"></object>" +
+            //          "</body>" +
+            //          "<html>";
 
-                string outfile = string.Format("{0}{1}.html", System.IO.Path.GetTempPath(), string.Format("{0:yyyyMMddHHmmssffff}", DateTime.Now));
+            //    string outfile = string.Format("{0}{1}.html", System.IO.Path.GetTempPath(), string.Format("{0:yyyyMMddHHmmssffff}", DateTime.Now));
 
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(File.Open(outfile, FileMode.OpenOrCreate, FileAccess.Write)))
-                {
-                    file.Write(htmlstr);
-                    file.Flush();
-                    file.Close();
-                }
+            //    using (System.IO.StreamWriter file = new System.IO.StreamWriter(File.Open(outfile, FileMode.OpenOrCreate, FileAccess.Write)))
+            //    {
+            //        file.Write(htmlstr);
+            //        file.Flush();
+            //        file.Close();
+            //    }
 
-                word.Selection.Range.InsertFile(outfile);
-            }
+            //    word.Selection.Range.InsertFile(outfile);
+            //}
             button4.Enabled = true;
         }
 
@@ -625,7 +643,7 @@ namespace ePUBee
 
         private void button12_Click(object sender, RibbonControlEventArgs e)
         {
-            Aboutus abw = new Aboutus();
+            About abw = new About();
             abw.ShowDialog();
         }
 

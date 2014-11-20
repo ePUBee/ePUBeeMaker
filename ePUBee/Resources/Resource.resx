@@ -292,4 +292,14 @@
     <value>Open Folder</value>
     <comment>BuildOk</comment>
   </data>
+  <data name="about" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="maker" xml:space="preserve">
+    <value>Maker</value>
+  </data>
+  <data name="pleaseselectanitem" xml:space="preserve">
+    <value>Please select an item.</value>
+    <comment>BuildPath</comment>
+  </data>
 </root>

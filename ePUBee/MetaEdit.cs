@@ -286,23 +286,26 @@ namespace ePUBee
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //here has bug, if not selected.
+            if (dataGridView1.SelectedRows.Count <= 0) dataGridView1.Rows[0].Selected = true;
             int selectedRowIndex = this.dataGridView1.SelectedRows[0].Index;
             if (selectedRowIndex >= 1)
             {
-                DataGridViewRow newRow = dataGridView1.Rows[selectedRowIndex]; 
+                DataGridViewRow newRow = dataGridView1.Rows[selectedRowIndex];
                 dataGridView1.Rows.Remove(dataGridView1.Rows[selectedRowIndex]);
                 dataGridView1.Rows.Insert(selectedRowIndex - 1, newRow);
 
                 dataGridView1.Rows[selectedRowIndex - 1].Selected = true;
                 dataGridView1.Rows[selectedRowIndex].Selected = false;
-            }  
+            }   
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count <= 0) dataGridView1.Rows[0].Selected = true;
+
             int selectedRowIndex = this.dataGridView1.SelectedRows[0].Index;
-            if (selectedRowIndex < dataGridView1.Rows.Count - 1)
+
+            if (selectedRowIndex < dataGridView1.Rows.Count - 2)
             {
                 DataGridViewRow newRow = dataGridView1.Rows[selectedRowIndex];
                 dataGridView1.Rows.Remove(dataGridView1.Rows[selectedRowIndex]);
@@ -310,7 +313,7 @@ namespace ePUBee
 
                 dataGridView1.Rows[selectedRowIndex + 1].Selected = true;
                 dataGridView1.Rows[selectedRowIndex].Selected = false;
-            }  
+            }
         }
     }
 }

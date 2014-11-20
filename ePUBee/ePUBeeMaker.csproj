@@ -265,11 +265,11 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="Aboutus.cs">
+    <Compile Include="About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aboutus.Designer.cs">
-      <DependentUpon>Aboutus.cs</DependentUpon>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
     </Compile>
     <Compile Include="AddRole.cs">
       <SubType>Form</SubType>
@@ -297,12 +297,6 @@
     </Compile>
     <Compile Include="EPUB.cs" />
     <Compile Include="IniConfig.cs" />
-    <Compile Include="insertflash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="insertflash.Designer.cs">
-      <DependentUpon>insertflash.cs</DependentUpon>
-    </Compile>
     <Compile Include="lang.cs" />
     <Compile Include="logger.cs" />
     <Compile Include="MetaEdit.cs">
@@ -342,26 +336,9 @@
       <DependentUpon>UserTaskPane.cs</DependentUpon>
     </Compile>
     <Compile Include="XHtmlTools.cs" />
-    <EmbeddedResource Include="Aboutus.resx">
-      <DependentUpon>Aboutus.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddRole.resx">
-      <DependentUpon>AddRole.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddBasic.resx">
-      <DependentUpon>AddBasic.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BuildOk.resx">
-      <DependentUpon>BuildOk.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="BuildPath.resx">
       <DependentUpon>BuildPath.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="insertflash.resx">
-      <DependentUpon>insertflash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MetaEdit.resx">
       <DependentUpon>MetaEdit.cs</DependentUpon>
@@ -377,10 +354,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Renamencx.resx">
-      <DependentUpon>Renamencx.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Resources\Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
@@ -398,7 +371,9 @@
       <DependentUpon>UserTaskPane.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="ePUBee_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -502,6 +477,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\epub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\37227.gif" />
+    <Content Include="Resources\542146.gif" />
+    <Content Include="Resources\about-icon.jpg" />
+    <Content Include="Resources\about2.jpg" />
+    <Content Include="Resources\donate-icon.jpg" />
+    <Content Include="Resources\donate.png" />
+    <Content Include="Resources\pdficon.jpg" />
+    <Content Include="Resources\pdficon.png" />
+    <Content Include="Resources\pdficon2.png" />
+    <Content Include="Resources\pdf_icon.png" />
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>

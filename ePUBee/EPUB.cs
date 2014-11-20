@@ -461,12 +461,14 @@ namespace ePUBee
             string outfile = FilePath + session + "\\OEBPS\\Text\\" + chapterName + ".xhtml";
 
             Regex regImg = new Regex(@"<body\b[^<>]*?\blang[\s\t\r\n]*=[\s\t\r\n]*[""']?[\s\t\r\n]*(?<lang>[^\s\t\r\n""'<>]*)[^<>]*?/?[\s\t\r\n]*>", RegexOptions.IgnoreCase);
-            MatchCollection matches = regImg.Matches(content);
+            //MatchCollection matches = regImg.Matches(content);
             string lang = null;
-            foreach (Match langch in matches)
-            {
-                lang = langch.Groups["lang"].Value;
-            }
+            lang = System.Globalization.CultureInfo.CurrentCulture.Name; //zh-CN, en-US, ja-JP etc
+            //Controls panel --> regin and language(Format setting)
+            //foreach (Match langch in matches)
+            //{
+            //    lang = langch.Groups["lang"].Value;
+            //}
 
             string htmlstr = "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?>\r\n" +
                             "<!DOCTYPE html PUBLIC \" -//W3C//DTD XHTML 1.1//EN\"\r\n" +

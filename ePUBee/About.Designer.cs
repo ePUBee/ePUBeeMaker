@@ -1,6 +1,6 @@
 ﻿namespace ePUBee
 {
-    partial class Aboutus
+    partial class About
     {
         /// <summary>
         /// Required designer variable.
@@ -184,7 +184,7 @@
             this.lblauthor.Text = Resources.Resource.author + ":";
             this.lblcontact.Text = Resources.Resource.contact + ":";
             this.btnOk.Text = Resources.Resource.ok;
-            this.lblsoft.Text = "ePUBee Maker v" + System.Configuration.ConfigurationSettings.AppSettings["version"].ToString();
+            this.lblsoft.Text = "ePUBee " + Resources.Resource.maker + " v" + System.Configuration.ConfigurationSettings.AppSettings["version"].ToString();
             //this.lblHtml.Text = "<a href='http://epubee.com'>http://epubee.com</a>";
         }
 
