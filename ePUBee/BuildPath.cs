@@ -54,6 +54,23 @@ namespace ePUBee
             return false;
         }
 
+
+        private bool insertnode(SynapticEffect.Forms.TreeListNode node, SynapticEffect.Forms.TreeListNode t, string txt)
+        {
+            for (int i = node.Nodes.Count - 1; i >= 0; i--)
+            {
+                if (node.Nodes[i].Text == txt)
+                {
+                    node.Nodes[i].Nodes.Add(t);
+                    return true;
+                }
+
+                if (insertnode(node.Nodes[i], t, txt)) return true;
+
+            }
+            return false;
+        }
+
         private void BuildPath_Load(object sender, EventArgs e)
         {
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
@@ -67,15 +84,20 @@ namespace ePUBee
                     {
                         for (int i = treeListView_Menu.Nodes.Count - 1; i >= 0; i--)
                         {
+                            SynapticEffect.Forms.TreeListNode tt = new SynapticEffect.Forms.TreeListNode();
+                            CheckBox cb = new CheckBox();
+                            cb.Checked = true;
+                            tt.Text = n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml;
+                            tt.SubItems.Add(cb);
+                            tt.SubItems.Add(n.Prefix);
+
                             if (treeListView_Menu.Nodes[i].Text == n.ParentNode.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml)
                             {
-                                SynapticEffect.Forms.TreeListNode tt = new SynapticEffect.Forms.TreeListNode();
-                                CheckBox cb = new CheckBox();
-                                cb.Checked = true;
-                                tt.Text = n.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml;
-                                tt.SubItems.Add(cb);
-                                tt.SubItems.Add(n.Prefix);
                                 treeListView_Menu.Nodes[i].Nodes.Add(tt);
+                            }
+                            else
+                            {
+                                insertnode(treeListView_Menu.Nodes[i], tt, n.ParentNode.SelectSingleNode("navLabel").SelectSingleNode("text").InnerXml);
                             }
                         }
                     }
